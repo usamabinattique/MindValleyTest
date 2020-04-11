@@ -7,6 +7,8 @@ target 'MindValleyTask' do
 
   # Pods for MindValleyTask
 	pod 'PromisesSwift'
+  pod 'Kingfisher', '~> 5.0'
+
 
   target 'MindValleyTaskTests' do
     inherit! :search_paths
