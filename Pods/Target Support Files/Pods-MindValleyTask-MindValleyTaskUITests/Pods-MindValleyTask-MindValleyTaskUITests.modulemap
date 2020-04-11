@@ -1,0 +1,6 @@
+framework module Pods_MindValleyTask_MindValleyTaskUITests {
+  umbrella header "Pods-MindValleyTask-MindValleyTaskUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
