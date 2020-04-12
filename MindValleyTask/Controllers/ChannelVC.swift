@@ -6,4 +6,14 @@
 //  Copyright © 2020 Usama. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ChannelVC: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+    
+}

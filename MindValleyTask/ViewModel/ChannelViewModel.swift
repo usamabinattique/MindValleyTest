@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import Promises
 
 class ChannelViewModel {
     
-    init() {}
+    private(set) var channels: [Channel] = []
+    private(set) var categories: [Category] = []
+    private(set) var episodes: [Episodes] = []
     
+    
+
 }

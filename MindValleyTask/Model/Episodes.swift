@@ -11,16 +11,16 @@ import Foundation
 
 // MARK: - Welcome
 struct EpisodesRoot: Codable {
-    let data: Episodes
+    let data: EpisodeData
 }
 
 // MARK: - DataClass
-struct Episodes: Codable {
-    let media: [Media]
+struct EpisodeData: Codable {
+    let media: [Episodes]
 }
 
 // MARK: - Media
-struct Media: Codable {
+struct Episodes: Codable {
     let type, title: String
     let coverAsset: CoverAsset
     let channel: EpisodeChannel

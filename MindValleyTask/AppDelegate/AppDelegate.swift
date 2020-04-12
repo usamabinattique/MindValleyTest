@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        _ = AppearanceProxyManager.shared.applyDefaultControllsApperance()
+        print("Application Path:: \(AppearanceProxyManager.displayApplicationPath())")
+
         return true
     }
 
