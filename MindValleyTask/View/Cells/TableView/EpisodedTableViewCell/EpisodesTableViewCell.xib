@@ -9,23 +9,23 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="220" id="KGk-i7-Jjw" customClass="CategoriesTableViewCell" customModule="MindValleyTask" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="435" height="220"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="202" id="KGk-i7-Jjw" customClass="EpisodesTableViewCell" customModule="MindValleyTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="313" height="202"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="435" height="220"/>
+                <rect key="frame" x="0.0" y="0.0" width="313" height="202"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-CL-Ggo" customClass="HeadingOneLabel" customModule="MindValleyTask" customModuleProvider="target">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTA-If-7gE" customClass="HeadingOneLabel" customModule="MindValleyTask" customModuleProvider="target">
                         <rect key="frame" x="20" y="30" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nam-y8-EzG">
-                        <rect key="frame" x="0.0" y="59" width="435" height="161"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SQ5-gd-TMZ">
+                        <rect key="frame" x="0.0" y="66" width="313" height="136"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cfV-82-Um2">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AVp-4j-up5">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -34,20 +34,20 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="nam-y8-EzG" secondAttribute="bottom" id="EVJ-Zh-ZMF"/>
-                    <constraint firstItem="Lf8-CL-Ggo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Kc1-6N-ubA"/>
-                    <constraint firstItem="nam-y8-EzG" firstAttribute="top" secondItem="Lf8-CL-Ggo" secondAttribute="bottom" constant="8" id="L5E-b1-oOf"/>
-                    <constraint firstItem="Lf8-CL-Ggo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="c6B-ye-TUS"/>
-                    <constraint firstAttribute="trailing" secondItem="nam-y8-EzG" secondAttribute="trailing" id="hQG-wb-N3h"/>
-                    <constraint firstItem="nam-y8-EzG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="w0e-h0-zix"/>
+                    <constraint firstItem="iTA-If-7gE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1ce-Ji-dtk"/>
+                    <constraint firstItem="SQ5-gd-TMZ" firstAttribute="top" secondItem="iTA-If-7gE" secondAttribute="bottom" constant="15" id="QHC-Ya-9ls"/>
+                    <constraint firstItem="iTA-If-7gE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="Yd9-SX-pAU"/>
+                    <constraint firstAttribute="bottom" secondItem="SQ5-gd-TMZ" secondAttribute="bottom" id="r8c-gb-TEN"/>
+                    <constraint firstAttribute="trailing" secondItem="SQ5-gd-TMZ" secondAttribute="trailing" id="uar-kL-n0c"/>
+                    <constraint firstItem="SQ5-gd-TMZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="z1e-xw-F9C"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="collectionView" destination="nam-y8-EzG" id="1ga-cG-N7Q"/>
-                <outlet property="headerLabel" destination="Lf8-CL-Ggo" id="Lax-yP-PUA"/>
+                <outlet property="collectionView" destination="SQ5-gd-TMZ" id="coH-br-f8f"/>
+                <outlet property="headerLabel" destination="iTA-If-7gE" id="Lhp-g3-OY6"/>
             </connections>
-            <point key="canvasLocation" x="215.21739130434784" y="186.83035714285714"/>
+            <point key="canvasLocation" x="126.81159420289856" y="180.80357142857142"/>
         </tableViewCell>
     </objects>
 </document>

@@ -15,6 +15,4 @@ class ChannelViewModel {
     private(set) var categories: [Category] = []
     private(set) var episodes: [Episodes] = []
     
-    
-
 }
