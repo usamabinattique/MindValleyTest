@@ -1,26 +1,51 @@
 PODS:
+  - CocoaAsyncSocket (7.6.4)
+  - Criollo (0.5.5):
+    - CocoaAsyncSocket (~> 7.6)
+  - GzipSwift (5.1.1)
   - Kingfisher (5.13.4):
     - Kingfisher/Core (= 5.13.4)
   - Kingfisher/Core (5.13.4)
+  - NetworkInterceptor (0.0.8):
+    - GzipSwift
+    - URLRequest-cURL
   - PromisesObjC (1.2.8)
   - PromisesSwift (1.2.8):
     - PromisesObjC (= 1.2.8)
+  - SwiftLocalhost (0.0.8):
+    - Criollo
+  - URLRequest-cURL (0.0.3):
+    - GzipSwift
 
 DEPENDENCIES:
   - Kingfisher (~> 5.0)
+  - NetworkInterceptor
   - PromisesSwift
+  - SwiftLocalhost
 
 SPEC REPOS:
   trunk:
+    - CocoaAsyncSocket
+    - Criollo
+    - GzipSwift
     - Kingfisher
+    - NetworkInterceptor
     - PromisesObjC
     - PromisesSwift
+    - SwiftLocalhost
+    - URLRequest-cURL
 
 SPEC CHECKSUMS:
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  Criollo: 617173837c296ca4248b0b058f36ce9b91e5c25b
+  GzipSwift: 893f3e48e597a1a4f62fafcb6514220fcf8287fa
   Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
+  NetworkInterceptor: 711ba8988a2200937e89a12da7fcd8cb28930e91
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   PromisesSwift: 37bad6f4daddb02f7c9c531efe91e8b21c13ee2f
+  SwiftLocalhost: 78ad6ca707ef2162aa9ab29407321226d44f5027
+  URLRequest-cURL: b159525e416ead3133ae60450660b8c82d2f2aa0
 
-PODFILE CHECKSUM: 55e58f2dbd1e73330c3774c130fd5129d02349c4
+PODFILE CHECKSUM: e85188e0feffa39247f50c4f44a1f9ce3130a412
 
 COCOAPODS: 1.9.1

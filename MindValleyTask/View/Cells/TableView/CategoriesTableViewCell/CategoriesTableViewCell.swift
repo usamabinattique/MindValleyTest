@@ -10,6 +10,7 @@ import UIKit
 
 class CategoriesTableViewCell: SharedTableViewCell {
 
+    var categories: [Category] = []
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -37,5 +38,11 @@ extension CategoriesTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return UICollectionViewCell()
+    }
+}
+
+extension CategoriesTableViewCell: Dequeueable {
+    static func hasNib() -> Bool {
+        true
     }
 }

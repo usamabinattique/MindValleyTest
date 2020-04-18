@@ -51,6 +51,9 @@
 		50745AB3244380EA00BC74FB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50745AB2244380EA00BC74FB /* Theme.swift */; };
 		50745AB52443813300BC74FB /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50745AB42443813300BC74FB /* FontExtension.swift */; };
 		50745AB82443819C00BC74FB /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50745AB72443819C00BC74FB /* NSObject.swift */; };
+		509A48AE244B732A0089E39F /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A48AD244B732A0089E39F /* UICollectionView.swift */; };
+		50B9299C2447DBB500299CC0 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9299B2447DBB500299CC0 /* Notification.swift */; };
+		50B9299E2447E53C00299CC0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9299D2447E53C00299CC0 /* UIImageView.swift */; };
 		50FCC4DA2443859100B62E98 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4D92443859100B62E98 /* DefaultTheme.swift */; };
 		50FCC4DC244385C100B62E98 /* AppearenceProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4DB244385C100B62E98 /* AppearenceProxyManager.swift */; };
 		50FCC4DF24438B1900B62E98 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4DE24438B1900B62E98 /* UILabel.swift */; };
@@ -60,8 +63,8 @@
 		50FCC4EB2443C1DD00B62E98 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4E92443C1DD00B62E98 /* CategoriesCollectionViewCell.swift */; };
 		50FCC4EC2443C1DD00B62E98 /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FCC4EA2443C1DD00B62E98 /* CategoriesCollectionViewCell.xib */; };
 		50FCC4EE2443C2C800B62E98 /* SharedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4ED2443C2C800B62E98 /* SharedTableViewCell.swift */; };
-		50FCC4F22443C36400B62E98 /* EpisodesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4F02443C36400B62E98 /* EpisodesCollectionViewCell.swift */; };
-		50FCC4F32443C36400B62E98 /* EpisodesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FCC4F12443C36400B62E98 /* EpisodesCollectionViewCell.xib */; };
+		50FCC4F22443C36400B62E98 /* MediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4F02443C36400B62E98 /* MediaCollectionViewCell.swift */; };
+		50FCC4F32443C36400B62E98 /* MediaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FCC4F12443C36400B62E98 /* MediaCollectionViewCell.xib */; };
 		50FCC4F72443CC0300B62E98 /* ChannelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4F52443CC0300B62E98 /* ChannelsTableViewCell.swift */; };
 		50FCC4F82443CC0300B62E98 /* ChannelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FCC4F62443CC0300B62E98 /* ChannelsTableViewCell.xib */; };
 		9D02EEA1118BDD4005259EAF /* Pods_MindValleyTask_MindValleyTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7AF0ABDEBE952477654D67 /* Pods_MindValleyTask_MindValleyTaskUITests.framework */; };
@@ -137,6 +140,9 @@
 		50745AB2244380EA00BC74FB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		50745AB42443813300BC74FB /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		50745AB72443819C00BC74FB /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		509A48AD244B732A0089E39F /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		50B9299B2447DBB500299CC0 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		50B9299D2447E53C00299CC0 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		50FCC4D92443859100B62E98 /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
 		50FCC4DB244385C100B62E98 /* AppearenceProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearenceProxyManager.swift; sourceTree = "<group>"; };
 		50FCC4DE24438B1900B62E98 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
@@ -146,8 +152,8 @@
 		50FCC4E92443C1DD00B62E98 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		50FCC4EA2443C1DD00B62E98 /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		50FCC4ED2443C2C800B62E98 /* SharedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTableViewCell.swift; sourceTree = "<group>"; };
-		50FCC4F02443C36400B62E98 /* EpisodesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesCollectionViewCell.swift; sourceTree = "<group>"; };
-		50FCC4F12443C36400B62E98 /* EpisodesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesCollectionViewCell.xib; sourceTree = "<group>"; };
+		50FCC4F02443C36400B62E98 /* MediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewCell.swift; sourceTree = "<group>"; };
+		50FCC4F12443C36400B62E98 /* MediaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCollectionViewCell.xib; sourceTree = "<group>"; };
 		50FCC4F52443CC0300B62E98 /* ChannelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsTableViewCell.swift; sourceTree = "<group>"; };
 		50FCC4F62443CC0300B62E98 /* ChannelsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelsTableViewCell.xib; sourceTree = "<group>"; };
 		8879B6EC618DE6D0A3B64D90 /* Pods-MindValleyTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTaskTests.release.xcconfig"; path = "Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -403,6 +409,9 @@
 			children = (
 				506147212442405200A78409 /* UITableView.swift */,
 				50FCC4E024438B8500B62E98 /* UIWindow.swift */,
+				50B9299B2447DBB500299CC0 /* Notification.swift */,
+				50B9299D2447E53C00299CC0 /* UIImageView.swift */,
+				509A48AD244B732A0089E39F /* UICollectionView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -492,8 +501,8 @@
 		50FCC4EF2443C34E00B62E98 /* EpisodesCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				50FCC4F02443C36400B62E98 /* EpisodesCollectionViewCell.swift */,
-				50FCC4F12443C36400B62E98 /* EpisodesCollectionViewCell.xib */,
+				50FCC4F02443C36400B62E98 /* MediaCollectionViewCell.swift */,
+				50FCC4F12443C36400B62E98 /* MediaCollectionViewCell.xib */,
 			);
 			path = EpisodesCollectionViewCell;
 			sourceTree = "<group>";
@@ -547,6 +556,7 @@
 				506146D62442334900A78409 /* Sources */,
 				506146D72442334900A78409 /* Frameworks */,
 				506146D82442334900A78409 /* Resources */,
+				2B26C5E48443BA34A0A60B88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -632,7 +642,7 @@
 				506146D42442334900A78409 /* LaunchScreen.storyboard in Resources */,
 				50745AB1244380E400BC74FB /* Roboto-Medium.ttf in Resources */,
 				50745AA9244380E400BC74FB /* Roboto-Italic.ttf in Resources */,
-				50FCC4F32443C36400B62E98 /* EpisodesCollectionViewCell.xib in Resources */,
+				50FCC4F32443C36400B62E98 /* MediaCollectionViewCell.xib in Resources */,
 				50745AAC244380E400BC74FB /* Roboto-Bold.ttf in Resources */,
 				50FCC4F82443CC0300B62E98 /* ChannelsTableViewCell.xib in Resources */,
 				50745AAA244380E400BC74FB /* Roboto-LightItalic.ttf in Resources */,
@@ -667,6 +677,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2B26C5E48443BA34A0A60B88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		444ED752026C4D3FC1583535 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -776,12 +803,13 @@
 			files = (
 				50FCC4E124438B8500B62E98 /* UIWindow.swift in Sources */,
 				5061471624423C8400A78409 /* Shared.swift in Sources */,
-				50FCC4F22443C36400B62E98 /* EpisodesCollectionViewCell.swift in Sources */,
+				50FCC4F22443C36400B62E98 /* MediaCollectionViewCell.swift in Sources */,
 				5061470C244239A100A78409 /* SharedLogger.swift in Sources */,
 				506147222442405200A78409 /* UITableView.swift in Sources */,
 				50FCC4F72443CC0300B62E98 /* ChannelsTableViewCell.swift in Sources */,
 				50745A9224437AC500BC74FB /* AppTestShared.swift in Sources */,
 				50FCC4DC244385C100B62E98 /* AppearenceProxyManager.swift in Sources */,
+				50B9299C2447DBB500299CC0 /* Notification.swift in Sources */,
 				506146FF2442377B00A78409 /* DefaultError.swift in Sources */,
 				506147072442381C00A78409 /* BaseNetwork.swift in Sources */,
 				50FCC4EB2443C1DD00B62E98 /* CategoriesCollectionViewCell.swift in Sources */,
@@ -803,8 +831,10 @@
 				5061471024423A5D00A78409 /* Episodes.swift in Sources */,
 				50745A8E244378B800BC74FB /* API.swift in Sources */,
 				506147092442396A00A78409 /* BaseAPIClient.swift in Sources */,
+				509A48AE244B732A0089E39F /* UICollectionView.swift in Sources */,
 				50FCC4DA2443859100B62E98 /* DefaultTheme.swift in Sources */,
 				50745AB52443813300BC74FB /* FontExtension.swift in Sources */,
+				50B9299E2447E53C00299CC0 /* UIImageView.swift in Sources */,
 				50745A902443796E00BC74FB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

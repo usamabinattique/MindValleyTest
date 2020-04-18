@@ -200,11 +200,23 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Criollo/Criollo.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GzipSwift/Gzip.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/NetworkInterceptor/NetworkInterceptor.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftLocalhost/SwiftLocalhost.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/URLRequest-cURL/URLRequest_cURL.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Criollo/Criollo.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GzipSwift/Gzip.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/NetworkInterceptor/NetworkInterceptor.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftLocalhost/SwiftLocalhost.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/URLRequest-cURL/URLRequest_cURL.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

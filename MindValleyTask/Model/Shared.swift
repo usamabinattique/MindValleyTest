@@ -12,3 +12,11 @@ import Foundation
 struct CoverAsset: Codable {
     let url: String
 }
+
+
+protocol BaseProtocol: Decodable { }
+
+extension EpisodesRoot: BaseProtocol { }
+extension ChannelsRoot: BaseProtocol { }
+extension CategoriesRoot: BaseProtocol { }
+

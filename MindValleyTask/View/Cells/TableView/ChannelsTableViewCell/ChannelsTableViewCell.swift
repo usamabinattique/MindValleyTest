@@ -27,3 +27,10 @@ class ChannelsTableViewCell: SharedTableViewCell {
 }
 
 
+
+
+extension ChannelsTableViewCell: Dequeueable {
+    static func hasNib() -> Bool {
+        true
+    }
+}

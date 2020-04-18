@@ -13,10 +13,14 @@ target 'MindValleyTask' do
   target 'MindValleyTaskTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'NetworkInterceptor'
+    pod 'SwiftLocalhost'
   end
 
   target 'MindValleyTaskUITests' do
     # Pods for testing
+    pod 'NetworkInterceptor'
+    pod 'SwiftLocalhost'
   end
 
 end

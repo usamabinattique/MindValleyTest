@@ -2,3 +2,9 @@ ${PODS_ROOT}/Target Support Files/Pods-MindValleyTask-MindValleyTaskUITests/Pods
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework
 ${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework
+${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
+${BUILT_PRODUCTS_DIR}/Criollo/Criollo.framework
+${BUILT_PRODUCTS_DIR}/GzipSwift/Gzip.framework
+${BUILT_PRODUCTS_DIR}/NetworkInterceptor/NetworkInterceptor.framework
+${BUILT_PRODUCTS_DIR}/SwiftLocalhost/SwiftLocalhost.framework
+${BUILT_PRODUCTS_DIR}/URLRequest-cURL/URLRequest_cURL.framework

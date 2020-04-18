@@ -23,7 +23,7 @@ class APIClient {
     ///   - error: Desired Error Model
     ///   - completion: RequestCompletionHandler
     func request<T, E>(endPoint: NetworkEndPoint, decode: T.Type,
-                       error: E.Type) -> Promise<T> where T: Decodable, E: Decodable & Error {
+                       error: E.Type) -> Promise<T> where T: BaseProtocol, E: Decodable & Error {
 
         return Promise<T> {
             return APIClient.shared.processRequest(with: endPoint, decodingType: T.self, errType: E.self)
@@ -37,7 +37,7 @@ class APIClient {
     ///   - decodingType: Desired Model
     ///   - errType: Desired Error Model
     ///   - completion: RequestCompletionHandler
-    private func processRequest<T, E>(with endPoint: NetworkEndPoint, decodingType: T.Type, errType: E.Type?) -> Promise<T> where T: Decodable, E: Decodable & Error {
+    private func processRequest<T, E>(with endPoint: NetworkEndPoint, decodingType: T.Type, errType: E.Type?) -> Promise<T> where T: BaseProtocol, E: Decodable & Error {
 
         return Promise<T> { [weak self] (fulfill, reject) in
             guard let self = self else { return }
