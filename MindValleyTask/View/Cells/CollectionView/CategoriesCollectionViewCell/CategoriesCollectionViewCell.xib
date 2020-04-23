@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="147" height="71"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csn-LY-iWf">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csn-LY-iWf" customClass="HeadingTwoLabel" customModule="MindValleyTask" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="147" height="71"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -33,7 +33,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="147" height="71"/>
             <connections>
-                <outlet property="categoryLabel" destination="Csn-LY-iWf" id="UUZ-Uk-8C9"/>
+                <outlet property="nameLabel" destination="Csn-LY-iWf" id="MWa-LW-8I0"/>
             </connections>
             <point key="canvasLocation" x="66" y="101"/>
         </collectionViewCell>

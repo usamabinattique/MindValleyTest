@@ -22,7 +22,10 @@ class EpisodesTableViewCell: SharedTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
+        initUI()
+        collectionViewConfiguration()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,7 +34,16 @@ class EpisodesTableViewCell: SharedTableViewCell {
         // Configure the view for the selected state
     }
     
+    func initUI() {
+        
+        contentView.backgroundColor = Constants.AppColors.tableCellsBackground
+        headerLabel.text = "New Episodes"
+        headerLabel.textColor = UIColor(red: 0.584, green: 0.596, blue: 0.616, alpha: 1)
+        collectionView.backgroundColor = .clear
+    }
+    
     func collectionViewConfiguration() {
+        collectionView.isScrollEnabled = true
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerNib(cellNib: MediaCollectionViewCell.self)
@@ -75,7 +87,7 @@ extension EpisodesTableViewCell: UICollectionViewDelegateFlowLayout {
         let width = collectionView.frame.width
         let height = collectionView.frame.height
 
-        return CGSize(width: width, height: height)
+        return CGSize(width: width * 0.45, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

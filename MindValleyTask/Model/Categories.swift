@@ -9,13 +9,8 @@
 import Foundation
 
 
-// MARK: - Welcome
-struct CategoriesRoot: Codable {
-    let data: Categories
-}
-
 // MARK: - DataClass
-struct Categories: Codable {
+struct CategoriesData: Codable {
     let categories: [Category]
 }
 

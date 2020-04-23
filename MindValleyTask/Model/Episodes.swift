@@ -10,9 +10,6 @@ import Foundation
 
 
 // MARK: - Welcome
-struct EpisodesRoot: Codable {
-    let data: EpisodeData
-}
 
 // MARK: - DataClass
 struct EpisodeData: Codable {

@@ -83,3 +83,7 @@ extension JSONDecoder {
         }
     }
 }
+
+struct Decodeable<T: Decodable>: Decodable {
+    var data: T
+}

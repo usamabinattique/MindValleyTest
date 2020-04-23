@@ -9,55 +9,88 @@
 import Foundation
 import Promises
 
+
 class ChannelViewModel: NSObject {
     
     private(set) var channels: [Channel] = []
     private(set) var categories: [Category] = []
     private(set) var episodes: [Episodes] = []
+
     
-    private let dataModels: [API: Decodable.Type] = [.episodes: EpisodesRoot.self,
-                                                     .channels: ChannelsRoot.self,
-                                                     .categories: Categories.self ]
-    
-    
+}
+
+// MARK: Network Calls
+
+extension ChannelViewModel {
     func getData() {
         
-//        var cases = API.allCases.makeIterator()
-//
-//        while let current = cases.next() {
-//
-//            APIClient.shared.request(endPoint: current, decode: dsf as! T.Type, error: DefaultError.self)
-//
-//
-//
-//        }
-        
         let endPoint = API.episodes
-        APIClient.shared.request(endPoint: endPoint, decode: EpisodesRoot.self, error: DefaultError.self)
+        APIClient.shared.request(endPoint: endPoint, decode: EpisodeData.self, error: DefaultError.self)
             .then { (episodeRoot)  in
-                self.episodes = episodeRoot.data.media
-                NotificationCenter.default.post(name: .serviceResponse, object: endPoint)
-                
+                self.episodes = episodeRoot.media
+                NotificationCenter.default.post(name: .dataResponse, object: endPoint)
+                self.getChannels()
+
         }.catch { (error) in
             //handle error, show alerts or display any sort of activity based on error
             
-            print((error as? DefaultError)?.description)
+            print((error as? DefaultError)!.description)
         }
-        
-        getCategories()
     }
     
-    
-    private func getCategories() {
-        let endPoint = API.categories
-          APIClient.shared.request(endPoint: endPoint, decode: CategoriesRoot.self, error: DefaultError.self)
-              .then { (categoriesRoot)  in
-                self.categories = categoriesRoot.data.categories
-                  NotificationCenter.default.post(name: .serviceResponse, object: endPoint)
+    private func getChannels() {
+        let endPoint = API.channels
+          APIClient.shared.request(endPoint: endPoint, decode: ChannelsData.self, error: DefaultError.self)
+              .then { (channelsRoot)  in
+                self.channels = channelsRoot.channels
+                  NotificationCenter.default.post(name: .dataResponse, object: endPoint)
                   
           }.catch { (_) in
               //handle error, show alerts or display any sort of activity based on error
           }
+
+    }
+    
+    private func getCategories() {
+        let endPoint = API.categories
+          APIClient.shared.request(endPoint: endPoint, decode: CategoriesData.self, error: DefaultError.self)
+              .then { (categoriesRoot)  in
+                self.categories = categoriesRoot.categories
+                  NotificationCenter.default.post(name: .dataResponse, object: endPoint)
+                  
+          }.catch { (_) in
+              //handle error, show alerts or display any sort of activity based on error
+          }
+    }
+    
+
+}
+
+extension ChannelViewModel {
+
+    func getDataFromLocalJsonFiles() {
+        
+        APIClient.shared.decodeLocalJsonFiles(localFileName: API.episodes.localFileName, model: EpisodeData.self) { (response, error) in
+            if let episodes = response as? EpisodeData {
+                self.episodes = episodes.media
+                NotificationCenter.default.post(name: .dataResponse, object: API.episodes)
+            }
+        }
+        
+        APIClient.shared.decodeLocalJsonFiles(localFileName: API.channels.localFileName, model: ChannelsData.self) { (response, error) in
+            if let channels = response as? ChannelsData {
+                self.channels = channels.channels
+                NotificationCenter.default.post(name: .dataResponse, object: API.channels)
+
+            }
+        }
+        APIClient.shared.decodeLocalJsonFiles(localFileName: API.categories.localFileName, model: CategoriesData.self) { (response, error) in
+            if let categories = response as? CategoriesData {
+                self.categories = categories.categories
+                NotificationCenter.default.post(name: .dataResponse, object: API.categories)
+                
+            }
+        }
     }
 }
 
@@ -91,7 +124,7 @@ extension ChannelViewModel: UITableViewDataSource {
             
             if let cell = tableView.dequeueReusableCell(withIdentifier: ChannelsTableViewCell.id, for: indexPath) as? ChannelsTableViewCell {
                 
-                
+                cell
                 return cell
             }
             
@@ -105,3 +138,5 @@ extension ChannelViewModel: UITableViewDataSource {
         return UITableViewCell()
     }
 }
+
+

@@ -14,9 +14,3 @@ struct CoverAsset: Codable {
 }
 
 
-protocol BaseProtocol: Decodable { }
-
-extension EpisodesRoot: BaseProtocol { }
-extension ChannelsRoot: BaseProtocol { }
-extension CategoriesRoot: BaseProtocol { }
-

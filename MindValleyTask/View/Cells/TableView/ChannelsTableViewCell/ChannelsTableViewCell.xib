@@ -61,9 +61,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="channelIconThumbnail" destination="1Sg-rU-qhe" id="2eT-bh-GDE"/>
                 <outlet property="collectionView" destination="tiI-px-bMx" id="WWF-x6-Lec"/>
                 <outlet property="headerLabel" destination="AXD-cK-eGe" id="XRz-u8-JU0"/>
-                <outlet property="mediaImageView" destination="1Sg-rU-qhe" id="OqL-6H-6nc"/>
                 <outlet property="totalCountLabel" destination="WWS-Nf-hz9" id="LJs-SV-ww5"/>
             </connections>
             <point key="canvasLocation" x="153.62318840579712" y="82.03125"/>

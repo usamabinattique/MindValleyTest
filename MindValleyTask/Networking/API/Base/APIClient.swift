@@ -9,6 +9,8 @@
 import Foundation
 import Promises
 
+typealias NetworkCompletion = ((_ response: Decodable?, _ error: Error?) -> Void)
+
 class APIClient {
 
     static let shared = APIClient()
@@ -23,7 +25,7 @@ class APIClient {
     ///   - error: Desired Error Model
     ///   - completion: RequestCompletionHandler
     func request<T, E>(endPoint: NetworkEndPoint, decode: T.Type,
-                       error: E.Type) -> Promise<T> where T: BaseProtocol, E: Decodable & Error {
+                       error: E.Type) -> Promise<T> where T: Decodable, E: Decodable & Error {
 
         return Promise<T> {
             return APIClient.shared.processRequest(with: endPoint, decodingType: T.self, errType: E.self)
@@ -37,7 +39,7 @@ class APIClient {
     ///   - decodingType: Desired Model
     ///   - errType: Desired Error Model
     ///   - completion: RequestCompletionHandler
-    private func processRequest<T, E>(with endPoint: NetworkEndPoint, decodingType: T.Type, errType: E.Type?) -> Promise<T> where T: BaseProtocol, E: Decodable & Error {
+    private func processRequest<T, E>(with endPoint: NetworkEndPoint, decodingType: T.Type, errType: E.Type?) -> Promise<T> where T: Decodable, E: Decodable & Error {
 
         return Promise<T> { [weak self] (fulfill, reject) in
             guard let self = self else { return }
@@ -66,8 +68,9 @@ class APIClient {
                         return
                     }
                 }
-
-                let (res, err) = JSONDecoder.decode(decodingType, errorType: errType, data: responseData)
+                
+                let responseModel = Decodeable<T>.self
+                let (res, err) = JSONDecoder.decode(responseModel, errorType: errType, data: responseData)
                 if let parsingError = err {
                     //this will be data issue so no need to save it for testing.
                     //                    if !endPoint.isTesting {
@@ -82,7 +85,7 @@ class APIClient {
                         let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
                         self.saveDataForTests(data: responseData, requestDetail: request, statusCode: statusCode)
                     }
-                    fulfill(resData)
+                    fulfill(resData.data)
                     return
                 }
                 reject(err ?? DefaultError.exception(error: error))
@@ -153,5 +156,23 @@ class APIClient {
         let fileURL = DocumentDirURL.appendingPathComponent(fileNameToBeSaved).appendingPathExtension("json")
         try! data.write(to: fileURL)
         print("File PAth: \(fileURL.path)")
+    }
+    
+    func decodeLocalJsonFiles<T: Decodable>(localFileName: String, model: T.Type, completion: NetworkCompletion) {
+        
+        if let url = Bundle.main.url(forResource: localFileName, withExtension: "json") {
+            
+            do {
+                
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let genericModel = Decodeable<T>.self
+                let jsonData = try decoder.decode(genericModel, from: data)
+                completion(jsonData.data, nil)
+                
+            } catch {
+                completion(nil, error)
+            }
+        }
     }
 }

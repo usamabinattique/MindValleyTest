@@ -10,6 +10,6 @@ import Foundation
 
 extension Notification.Name {
 
-    static let serviceResponse = Notification.Name("serviceResponse")
+    static let dataResponse = Notification.Name("serviceResponse")
 
 }

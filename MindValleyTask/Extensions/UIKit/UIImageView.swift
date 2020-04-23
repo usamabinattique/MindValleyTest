@@ -13,7 +13,7 @@ extension UIImageView {
     
     typealias ImageHandler = (UIImage?, Error?) -> Void
     
-    static func getImage(urlString: String?, completion: @escaping ImageHandler ) {
+     func getImage(urlString: String?, completion: @escaping ImageHandler ) {
         
         guard let urlString = urlString, let url = URL(string: urlString) else {
             return

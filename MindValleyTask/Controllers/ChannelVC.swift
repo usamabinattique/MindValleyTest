@@ -17,8 +17,10 @@ class ChannelVC: UITableViewController {
         
         super.viewDidLoad()
         channelViewModel = ChannelViewModel()
+        initUI()
         tableViewConfiguration()
-        channelViewModel.getData()
+        view.layer.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1).cgColor
+        channelViewModel.getDataFromLocalJsonFiles()
     }
     
      override func viewDidDisappear(_ animated: Bool) {
@@ -30,7 +32,21 @@ class ChannelVC: UITableViewController {
         }
     }
     
+    func initUI() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Channels"
+//
+//        view.layer.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1).cgColor
+//
+//        view.layer.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1).cgColor
+
+    }
+    
     func tableViewConfiguration() {
+        tableView.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1)
+        tableView.estimatedRowHeight = 600
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
         tableView.dataSource = channelViewModel
         tableView.registerCell(withType: EpisodesTableViewCell.self)
         tableView.registerCell(withType: ChannelsTableViewCell.self)
@@ -42,7 +58,7 @@ extension ChannelVC {
     
     func observeUpdatesOfData() {
         
-        let notif = NotificationCenter.default.addObserver(forName: .serviceResponse, object: nil, queue: .main) { [weak self] notification in
+        let notif = NotificationCenter.default.addObserver(forName: .dataResponse, object: nil, queue: .main) { [weak self] notification in
             
             guard let self = self, let currentSection = notification.object as? API else { return }
             

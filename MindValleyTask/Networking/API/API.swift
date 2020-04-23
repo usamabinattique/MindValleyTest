@@ -14,18 +14,7 @@ enum API: NetworkEndPoint, CaseIterable {
     case episodes
     case channels
     case categories
-    
-    var dataModel: BaseProtocol.Type {
-        switch self {
-        case .episodes:
-            return EpisodesRoot.self
-        case .channels:
-            return ChannelsRoot.self
-        default:
-           return CategoriesRoot.self
-        }
-    }
-    
+
     var sequence: Int {
         switch self {
         case .episodes:
@@ -35,6 +24,17 @@ enum API: NetworkEndPoint, CaseIterable {
         case .categories:
             return 2
         }
+    }
+    
+    var localFileName: String {
+        switch self {
+          case .episodes:
+              return "NewEpisodes"
+          case .channels:
+             return "Channels"
+          case .categories:
+              return "Categories"
+          }
     }
 }
 

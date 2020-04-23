@@ -8,13 +8,8 @@
 
 import Foundation
 
-// MARK: - Welcome
-struct ChannelsRoot: Codable {
-    let data: DataClass
-}
-
 // MARK: - DataClass
-struct DataClass: Codable {
+struct ChannelsData: Codable {
     let channels: [Channel]
 }
 
@@ -28,6 +23,12 @@ struct Channel: Codable {
     let iconAsset: IconAsset?
     let coverAsset: CoverAsset
     let slug: String?
+    var channelType: ChannelType {
+        if series?.count ?? 0 > 0 {
+            return .series
+        }
+        return .course
+    }
 }
 
 
@@ -59,4 +60,9 @@ struct Series: Codable {
     let title: String
     let coverAsset: CoverAsset
     let id: String?
+}
+
+enum ChannelType: String {
+    case course = "episodes"
+    case series = "series"
 }
