@@ -40,6 +40,7 @@ class MediaCollectionViewCell: UICollectionViewCell {
             
             paragraphStyle.lineHeightMultiple = 0.99
             channelTitleLabel.attributedText = NSMutableAttributedString(string: episode.channel.title, attributes: [.kern: 1, .paragraphStyle: paragraphStyle])
+            mediaImageView.kf.indicatorType = .activity
             mediaImageView.getImage(urlString: episode.coverAsset.url) { (image, error) in
                 if let image = image {
                     self.mediaImageView.image = image
@@ -56,6 +57,7 @@ class MediaCollectionViewCell: UICollectionViewCell {
             episodeBottomConstraint.priority = .defaultLow
             mediaTitleLabel.text = channel.title
             channelTitleLabel.text?.removeAll()
+            mediaImageView.kf.indicatorType = .activity
             mediaImageView.getImage(urlString: channel.imageUrl) { (image, error) in
                 if let image = image {
                     self.mediaImageView.image = image
@@ -67,16 +69,6 @@ class MediaCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        addShadow()
-    }
-    
-    func addShadow() {
-        // add shadow for image view
-        mediaImageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
-        mediaImageView.layer.shadowOpacity = 1
-        mediaImageView.layer.shadowOffset = CGSize(width: 0, height: 10)
-        mediaImageView.layer.shadowRadius = 20
     }
 }
 

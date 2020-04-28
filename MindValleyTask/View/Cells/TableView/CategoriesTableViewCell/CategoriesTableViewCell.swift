@@ -61,6 +61,8 @@ class CategoriesTableViewCell: BaseTableViewCell {
     }
 }
 
+// MARK: UICollectionView DataSource
+
 extension CategoriesTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

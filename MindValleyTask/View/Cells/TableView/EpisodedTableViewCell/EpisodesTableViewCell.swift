@@ -59,7 +59,6 @@ private extension EpisodesTableViewCell {
     
     func collectionViewConfiguration() {
         
-        collectionView.isScrollEnabled = true
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerNib(cellNib: MediaCollectionViewCell.self)
@@ -103,7 +102,6 @@ extension EpisodesTableViewCell: UICollectionViewDelegateFlowLayout {
         interItemSpacing
     }
 }
-
 
 extension EpisodesTableViewCell: Dequeueable {
     static func hasNib() -> Bool {

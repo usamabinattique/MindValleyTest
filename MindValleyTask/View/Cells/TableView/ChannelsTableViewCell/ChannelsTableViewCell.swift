@@ -85,7 +85,6 @@ private extension ChannelsTableViewCell {
 
     func collectionViewConfiguration() {
         
-        collectionView.isScrollEnabled = true
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerNib(cellNib: MediaCollectionViewCell.self)
@@ -100,6 +99,8 @@ private extension ChannelsTableViewCell {
         }
     }
 }
+
+// MARK: UICollectionView DataSource
 
 extension ChannelsTableViewCell: UICollectionViewDataSource {
     

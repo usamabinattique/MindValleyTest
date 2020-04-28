@@ -9,7 +9,6 @@
 import Foundation
 import Promises
 
-
 class ChannelViewModel: NSObject {
     
     private(set) var channels: [Channel] = []
@@ -19,7 +18,6 @@ class ChannelViewModel: NSObject {
 }
 
 // MARK: Network Calls
-
 extension ChannelViewModel {
     
     func getEpisodesData() -> Promise<[Episodes]> {
@@ -36,15 +34,12 @@ extension ChannelViewModel {
                         .then { (channels) in
                             // here we have the channels data set, we can mainpulate it as per our requirements.
                             
-                            
                     }
-                    
                     
                     // this is a callback, updates the caller with the promise value of episodes
 
                     // this will be executed when all service calls have been made because if either of them fails because of some reason, then it will go to the reject block of the respective function, where we can update UI or do operations as per the requirement.
                     fulfil(episodeRoot.media)
-
                     
              }.catch { (error) in
                  //handle error, show alerts or display any sort of activity based on error
