@@ -62,6 +62,17 @@
 		50B9299E2447E53C00299CC0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9299D2447E53C00299CC0 /* UIImageView.swift */; };
 		50CCA3542452E839001D2761 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCA3532452E839001D2761 /* Array.swift */; };
 		50CCA3562453066D001D2761 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCA3552453066D001D2761 /* UIView.swift */; };
+		50CCA35C2458CC10001D2761 /* ChannelVCUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCA35B2458CC10001D2761 /* ChannelVCUT.swift */; };
+		50CCA35E2458CD1C001D2761 /* EpisodesNetworkUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCA35D2458CD1C001D2761 /* EpisodesNetworkUT.swift */; };
+		50CCA3632458D09E001D2761 /* MockDataEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCA3622458D09E001D2761 /* MockDataEnums.swift */; };
+		50CCA3662458D16B001D2761 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCA3652458D16B001D2761 /* DispatchQueue.swift */; };
+		50CCA3682458D48E001D2761 /* ChannelsNetworkUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCA3672458D48E001D2761 /* ChannelsNetworkUT.swift */; };
+		50CCA36A2458D49E001D2761 /* CategoriesNetworkUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCA3692458D49E001D2761 /* CategoriesNetworkUT.swift */; };
+		50CCA36C2458D8B0001D2761 /* 404.json in Resources */ = {isa = PBXBuildFile; fileRef = 50CCA36B2458D8B0001D2761 /* 404.json */; };
+		50CCA3702458D929001D2761 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 50CCA36D2458D929001D2761 /* Categories.json */; };
+		50CCA3712458D929001D2761 /* NewEpisodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 50CCA36E2458D929001D2761 /* NewEpisodes.json */; };
+		50CCA3722458D929001D2761 /* Channels.json in Resources */ = {isa = PBXBuildFile; fileRef = 50CCA36F2458D929001D2761 /* Channels.json */; };
+		50CCA3742458DA1C001D2761 /* ChannelViewModelUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCA3732458DA1C001D2761 /* ChannelViewModelUT.swift */; };
 		50FCC4DA2443859100B62E98 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4D92443859100B62E98 /* DefaultTheme.swift */; };
 		50FCC4DC244385C100B62E98 /* AppearenceProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4DB244385C100B62E98 /* AppearenceProxyManager.swift */; };
 		50FCC4DF24438B1900B62E98 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4DE24438B1900B62E98 /* UILabel.swift */; };
@@ -159,6 +170,17 @@
 		50B9299D2447E53C00299CC0 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		50CCA3532452E839001D2761 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		50CCA3552453066D001D2761 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		50CCA35B2458CC10001D2761 /* ChannelVCUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVCUT.swift; sourceTree = "<group>"; };
+		50CCA35D2458CD1C001D2761 /* EpisodesNetworkUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesNetworkUT.swift; sourceTree = "<group>"; };
+		50CCA3622458D09E001D2761 /* MockDataEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataEnums.swift; sourceTree = "<group>"; };
+		50CCA3652458D16B001D2761 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		50CCA3672458D48E001D2761 /* ChannelsNetworkUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsNetworkUT.swift; sourceTree = "<group>"; };
+		50CCA3692458D49E001D2761 /* CategoriesNetworkUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNetworkUT.swift; sourceTree = "<group>"; };
+		50CCA36B2458D8B0001D2761 /* 404.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 404.json; sourceTree = "<group>"; };
+		50CCA36D2458D929001D2761 /* Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Categories.json; path = MindValleyTask/HelpingFiles/Categories.json; sourceTree = SOURCE_ROOT; };
+		50CCA36E2458D929001D2761 /* NewEpisodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NewEpisodes.json; path = MindValleyTask/HelpingFiles/NewEpisodes.json; sourceTree = SOURCE_ROOT; };
+		50CCA36F2458D929001D2761 /* Channels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Channels.json; path = MindValleyTask/HelpingFiles/Channels.json; sourceTree = SOURCE_ROOT; };
+		50CCA3732458DA1C001D2761 /* ChannelViewModelUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewModelUT.swift; sourceTree = "<group>"; };
 		50FCC4D92443859100B62E98 /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
 		50FCC4DB244385C100B62E98 /* AppearenceProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearenceProxyManager.swift; sourceTree = "<group>"; };
 		50FCC4DE24438B1900B62E98 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
@@ -223,9 +245,6 @@
 		503A50C024508EE1003291C2 /* JsonFiles */ = {
 			isa = PBXGroup;
 			children = (
-				503A50C324508F06003291C2 /* Categories.json */,
-				503A50C124508F06003291C2 /* Channels.json */,
-				503A50C224508F06003291C2 /* NewEpisodes.json */,
 			);
 			path = JsonFiles;
 			sourceTree = "<group>";
@@ -265,6 +284,7 @@
 				5061471B24423F4D00A78409 /* Controllers */,
 				5061471E24423FDE00A78409 /* HelpingFiles */,
 				506146D52442334900A78409 /* Info.plist */,
+				506146F82442339300A78409 /* README.md */,
 				506146CD2442333E00A78409 /* Main.storyboard */,
 			);
 			path = MindValleyTask;
@@ -273,7 +293,14 @@
 		506146DD2442334900A78409 /* MindValleyTaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				50CCA3622458D09E001D2761 /* MockDataEnums.swift */,
+				50CCA3612458D04F001D2761 /* MockData */,
 				509A48B0244B87B70089E39F /* Helper */,
+				50CCA3732458DA1C001D2761 /* ChannelViewModelUT.swift */,
+				50CCA35B2458CC10001D2761 /* ChannelVCUT.swift */,
+				50CCA35D2458CD1C001D2761 /* EpisodesNetworkUT.swift */,
+				50CCA3672458D48E001D2761 /* ChannelsNetworkUT.swift */,
+				50CCA3692458D49E001D2761 /* CategoriesNetworkUT.swift */,
 				506146DE2442334900A78409 /* MindValleyTaskTests.swift */,
 				506146E02442334900A78409 /* Info.plist */,
 			);
@@ -416,9 +443,11 @@
 			isa = PBXGroup;
 			children = (
 				503A50C024508EE1003291C2 /* JsonFiles */,
+				503A50C324508F06003291C2 /* Categories.json */,
+				503A50C124508F06003291C2 /* Channels.json */,
+				503A50C224508F06003291C2 /* NewEpisodes.json */,
 				506146D02442334900A78409 /* Assets.xcassets */,
 				506146D22442334900A78409 /* LaunchScreen.storyboard */,
-				506146F82442339300A78409 /* README.md */,
 			);
 			path = HelpingFiles;
 			sourceTree = "<group>";
@@ -426,6 +455,7 @@
 		5061471F2442403C00A78409 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				50CCA3642458D15C001D2761 /* Swift */,
 				50745AB62443819500BC74FB /* Foundation */,
 				506147202442404900A78409 /* UIKit */,
 			);
@@ -501,6 +531,25 @@
 				509A48B5244B88110089E39F /* LocalServer.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		50CCA3612458D04F001D2761 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				50CCA36D2458D929001D2761 /* Categories.json */,
+				50CCA36F2458D929001D2761 /* Channels.json */,
+				50CCA36E2458D929001D2761 /* NewEpisodes.json */,
+				50CCA36B2458D8B0001D2761 /* 404.json */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		50CCA3642458D15C001D2761 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				50CCA3652458D16B001D2761 /* DispatchQueue.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		50FCC4DD24438B1000B62E98 /* UILabel */ = {
@@ -707,6 +756,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50CCA3712458D929001D2761 /* NewEpisodes.json in Resources */,
+				50CCA3722458D929001D2761 /* Channels.json in Resources */,
+				50CCA36C2458D8B0001D2761 /* 404.json in Resources */,
+				50CCA3702458D929001D2761 /* Categories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,6 +908,7 @@
 				50FCC4DC244385C100B62E98 /* AppearenceProxyManager.swift in Sources */,
 				50B9299C2447DBB500299CC0 /* Notification.swift in Sources */,
 				50CCA3542452E839001D2761 /* Array.swift in Sources */,
+				50CCA3662458D16B001D2761 /* DispatchQueue.swift in Sources */,
 				506146FF2442377B00A78409 /* DefaultError.swift in Sources */,
 				506147072442381C00A78409 /* BaseNetwork.swift in Sources */,
 				50FCC4EB2443C1DD00B62E98 /* CategoriesCollectionViewCell.swift in Sources */,
@@ -888,9 +942,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50CCA3632458D09E001D2761 /* MockDataEnums.swift in Sources */,
+				50CCA3682458D48E001D2761 /* ChannelsNetworkUT.swift in Sources */,
 				509A48B4244B87ED0089E39F /* ResponseDataFactory.swift in Sources */,
+				50CCA35C2458CC10001D2761 /* ChannelVCUT.swift in Sources */,
 				509A48B2244B87C80089E39F /* HTTPStatusCode.swift in Sources */,
+				50CCA3742458DA1C001D2761 /* ChannelViewModelUT.swift in Sources */,
 				509A48B6244B88110089E39F /* LocalServer.swift in Sources */,
+				50CCA35E2458CD1C001D2761 /* EpisodesNetworkUT.swift in Sources */,
+				50CCA36A2458D49E001D2761 /* CategoriesNetworkUT.swift in Sources */,
 				506146DF2442334900A78409 /* MindValleyTaskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

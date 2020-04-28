@@ -21,46 +21,78 @@ class ChannelViewModel: NSObject {
 // MARK: Network Calls
 
 extension ChannelViewModel {
-    func getData() {
+    
+    func getEpisodesData() -> Promise<[Episodes]> {
         
-        let endPoint = API.episodes
-        APIClient.shared.request(endPoint: endPoint, decode: EpisodeData.self, error: DefaultError.self)
-            .then { (episodeRoot)  in
-                self.episodes = episodeRoot.media
-                NotificationCenter.default.post(name: .dataResponse, object: endPoint)
-                self.getChannels()
-
-        }.catch { (error) in
-            //handle error, show alerts or display any sort of activity based on error
+        return Promise<[Episodes]>.init(on: .defaultBackgroundQueue) { fulfil, reject in
             
-            print((error as? DefaultError)!.description)
+            let endPoint = API.episodes
+             APIClient.shared.request(endPoint: endPoint, decode: EpisodeData.self, error: DefaultError.self)
+                 .then { (episodeRoot)  in
+                     self.episodes = episodeRoot.media
+                     NotificationCenter.default.post(name: .dataResponse, object: endPoint)
+
+                    self.getChannels()
+                        .then { (channels) in
+                            // here we have the channels data set, we can mainpulate it as per our requirements.
+                            
+                            
+                    }
+                    
+                    
+                    // this is a callback, updates the caller with the promise value of episodes
+
+                    // this will be executed when all service calls have been made because if either of them fails because of some reason, then it will go to the reject block of the respective function, where we can update UI or do operations as per the requirement.
+                    fulfil(episodeRoot.media)
+
+                    
+             }.catch { (error) in
+                 //handle error, show alerts or display any sort of activity based on error
+                    reject(error)
+            }
         }
     }
     
-    private func getChannels() {
-        let endPoint = API.channels
-          APIClient.shared.request(endPoint: endPoint, decode: ChannelsData.self, error: DefaultError.self)
-              .then { (channelsRoot)  in
-                self.channels = channelsRoot.channels
-                  NotificationCenter.default.post(name: .dataResponse, object: endPoint)
-                self.getCategories()
-                  
-          }.catch { (_) in
-              //handle error, show alerts or display any sort of activity based on error
-          }
-
+    func getChannels() -> Promise<[Channel]> {
+        
+        return Promise<[Channel]>(on: .defaultBackgroundQueue) { fulfil, reject in
+            
+            let endPoint = API.channels
+            APIClient.shared.request(endPoint: endPoint, decode: ChannelsData.self, error: DefaultError.self)
+                .then { (channelsRoot)  in
+                    self.channels = channelsRoot.channels
+                    NotificationCenter.default.post(name: .dataResponse, object: endPoint)
+                    self.getCategories()
+                        .then { (categories) in
+                        // at this point we can update our main view controller that all data has been fetched, to provide a finer UI experience i am updating the main view controller as soon as i get the result from one service but if they are interlocked and one of them depends on the previous for some reason then this pipelining is really helpful.
+                    }
+                    
+                    // this is a callback, updates the caller with the promise value of channels
+                    fulfil(channelsRoot.channels)
+                    
+            }.catch { (error) in
+                //handle error, show alerts or display any sort of activity based on error
+                reject(error)
+            }
+        }
     }
     
-    private func getCategories() {
-        let endPoint = API.categories
-          APIClient.shared.request(endPoint: endPoint, decode: CategoriesData.self, error: DefaultError.self)
-              .then { (categoriesRoot)  in
-                self.categories = categoriesRoot.categories
-                  NotificationCenter.default.post(name: .dataResponse, object: endPoint)
-                  
-          }.catch { (_) in
-              //handle error, show alerts or display any sort of activity based on error
-          }
+    func getCategories()  -> Promise<[Category]> {
+        
+        return Promise<[Category]>(on: .defaultBackgroundQueue) { fulfil, reject in
+            let endPoint = API.categories
+            APIClient.shared.request(endPoint: endPoint, decode: CategoriesData.self, error: DefaultError.self)
+                .then { (categoriesRoot)  in
+                    self.categories = categoriesRoot.categories
+                    NotificationCenter.default.post(name: .dataResponse, object: endPoint)
+                    // this is a callback, updates the caller with the promise value of categories
+                    fulfil(self.categories)
+                    
+            }.catch { (error) in
+                //handle error, show alerts or display any sort of activity based on error
+                reject(error)
+            }
+        }
     }
 }
 
@@ -107,6 +139,8 @@ private extension ChannelViewModel {
     }
 
 }
+
+// MARK: UI TableView Data Source
 
 extension ChannelViewModel: UITableViewDataSource {
     
