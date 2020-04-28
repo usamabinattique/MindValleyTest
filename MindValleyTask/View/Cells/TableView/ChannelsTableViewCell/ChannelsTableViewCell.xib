@@ -45,16 +45,26 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4i-gx-grg">
+                        <rect key="frame" x="15" y="256" width="312" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="FbG-WT-RXw"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="e4i-gx-grg" secondAttribute="bottom" id="06g-kw-hdK"/>
                     <constraint firstItem="WWS-Nf-hz9" firstAttribute="top" secondItem="AXD-cK-eGe" secondAttribute="bottom" constant="1" id="5Fa-Xg-go1"/>
                     <constraint firstItem="AXD-cK-eGe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="7ZW-A4-aY2"/>
+                    <constraint firstAttribute="trailing" secondItem="e4i-gx-grg" secondAttribute="trailing" constant="15" id="7g5-GA-gFv"/>
                     <constraint firstItem="tiI-px-bMx" firstAttribute="top" secondItem="WWS-Nf-hz9" secondAttribute="bottom" constant="14" id="B7T-fR-T3q"/>
                     <constraint firstItem="WWS-Nf-hz9" firstAttribute="leading" secondItem="AXD-cK-eGe" secondAttribute="leading" id="IGd-dW-v4a"/>
                     <constraint firstItem="AXD-cK-eGe" firstAttribute="leading" secondItem="1Sg-rU-qhe" secondAttribute="trailing" constant="14" id="RG7-dk-bfF"/>
                     <constraint firstAttribute="trailing" secondItem="tiI-px-bMx" secondAttribute="trailing" id="Ujd-w5-9Y8"/>
                     <constraint firstItem="tiI-px-bMx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lmu-3T-Zef"/>
                     <constraint firstItem="1Sg-rU-qhe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="oNA-Sx-8KM"/>
+                    <constraint firstItem="e4i-gx-grg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="rPn-r7-y1f"/>
                     <constraint firstItem="1Sg-rU-qhe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="vDK-Ic-ehE"/>
                     <constraint firstAttribute="bottom" secondItem="tiI-px-bMx" secondAttribute="bottom" id="wyO-gq-Xji"/>
                 </constraints>
@@ -64,6 +74,7 @@
                 <outlet property="channelIconThumbnail" destination="1Sg-rU-qhe" id="2eT-bh-GDE"/>
                 <outlet property="collectionView" destination="tiI-px-bMx" id="WWF-x6-Lec"/>
                 <outlet property="headerLabel" destination="AXD-cK-eGe" id="XRz-u8-JU0"/>
+                <outlet property="separatorView" destination="e4i-gx-grg" id="Jkx-TQ-k9F"/>
                 <outlet property="totalCountLabel" destination="WWS-Nf-hz9" id="LJs-SV-ww5"/>
             </connections>
             <point key="canvasLocation" x="153.62318840579712" y="82.03125"/>

@@ -26,7 +26,7 @@ class MediaCollectionViewCell: UICollectionViewCell {
     }
     
     @IBOutlet weak var mediaImageView: UIImageView!
-    
+
     var paragraphStyle = NSMutableParagraphStyle()
     
     var episode: Episodes! {

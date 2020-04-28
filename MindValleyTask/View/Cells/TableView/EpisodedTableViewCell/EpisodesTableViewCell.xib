@@ -32,14 +32,24 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRt-Na-ocC">
+                        <rect key="frame" x="15" y="201" width="283" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="7hI-x5-F7u"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="iTA-If-7gE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1ce-Ji-dtk"/>
+                    <constraint firstAttribute="trailing" secondItem="hRt-Na-ocC" secondAttribute="trailing" constant="15" id="83j-GB-bly"/>
                     <constraint firstItem="SQ5-gd-TMZ" firstAttribute="top" secondItem="iTA-If-7gE" secondAttribute="bottom" constant="15" id="QHC-Ya-9ls"/>
                     <constraint firstItem="iTA-If-7gE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Yd9-SX-pAU"/>
+                    <constraint firstItem="hRt-Na-ocC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="dB2-7I-TF2"/>
                     <constraint firstAttribute="trailing" secondItem="iTA-If-7gE" secondAttribute="trailing" id="gkg-mc-zpG"/>
                     <constraint firstAttribute="bottom" secondItem="SQ5-gd-TMZ" secondAttribute="bottom" id="r8c-gb-TEN"/>
                     <constraint firstAttribute="trailing" secondItem="SQ5-gd-TMZ" secondAttribute="trailing" id="uar-kL-n0c"/>
+                    <constraint firstAttribute="bottom" secondItem="hRt-Na-ocC" secondAttribute="bottom" id="w5S-k7-vdK"/>
                     <constraint firstItem="SQ5-gd-TMZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="z1e-xw-F9C"/>
                 </constraints>
             </tableViewCellContentView>
@@ -47,6 +57,7 @@
             <connections>
                 <outlet property="collectionView" destination="SQ5-gd-TMZ" id="coH-br-f8f"/>
                 <outlet property="headerLabel" destination="iTA-If-7gE" id="Lhp-g3-OY6"/>
+                <outlet property="separatorView" destination="hRt-Na-ocC" id="eiz-2c-Tv4"/>
             </connections>
             <point key="canvasLocation" x="126.81159420289856" y="180.80357142857142"/>
         </tableViewCell>

@@ -14,6 +14,8 @@ enum Constants {
 
     enum AppColors {
         static let tableCellsBackground = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1)
+        
+        static let appBackground = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1)
     }
     
 }
