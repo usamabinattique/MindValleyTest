@@ -12,32 +12,44 @@ class ChannelsTableViewCell: SharedTableViewCell {
 
     let spacing: CGFloat = 3
     let inset: CGFloat = 4
-    
-    @IBOutlet weak var channelTitle: UILabel!
 
-    @IBOutlet weak var totalCountLabel: UILabel!
-    @IBOutlet weak var channelIconThumbnail: UIImageView!
+    @IBOutlet weak var totalCountLabel: UILabel! {
+        didSet {
+            totalCountLabel.textColor = UIColor(red: 0.584, green: 0.596, blue: 0.616, alpha: 1)
+        }
+    }
+    
+    @IBOutlet weak var channelIconThumbnail: UIImageView! {
+        didSet {
+            channelIconThumbnail.roundOnly()
+        }
+    }
     
     var channel: Channel! {
          didSet {
              
-             totalCountLabel.text = String(format: "%d %@", channel.mediaCount, channel.channelType.rawValue)
-            headerLabel.text = channel.title
+             totalCountLabel.attributedText =  NSMutableAttributedString(string: String(format: "%d %@", channel.mediaCount,channel.channelType.rawValue), attributes: [.kern: 0.11])
             
+            headerLabel.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            headerLabel.attributedText = NSMutableAttributedString(string: channel.title ?? "...", attributes: [.kern: 0.14])
+
             channelIconThumbnail.getImage(urlString: channel.iconAsset?.thumbnailURL) { (image, error) in
                 if let image = image {
                     self.channelIconThumbnail.image = image
-                    self.contentView.layoutIfNeeded()
+                    self.contentView.setNeedsLayout()
                 }
             }
             
-             collectionView.reloadData()
+            collectionView.reloadData()
+            layoutIfNeeded()
          }
      }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        initUI()
+        collectionViewConfiguration()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -46,47 +58,80 @@ class ChannelsTableViewCell: SharedTableViewCell {
         // Configure the view for the selected state
     }
     
-    
+    func initUI() {
+        contentView.backgroundColor = Constants.AppColors.tableCellsBackground
+        collectionView.backgroundColor = .clear
+
+    }
+
     func collectionViewConfiguration() {
         
-        collectionView.backgroundColor = .clear
+        collectionView.isScrollEnabled = true
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.registerNib(cellNib: CategoriesCollectionViewCell.self)
+        collectionView.registerNib(cellNib: MediaCollectionViewCell.self)
+    }
+//
+    
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+          let verticalConstraint: CGFloat = 35.0
+              let channelImageHeightConstraint: CGFloat = 50.0
+              let width = Int(((collectionView.frame.width) / 2) - (inset + spacing))
+              
+              collectionView.frame = CGRect.init(origin: .zero, size: CGSize.init(width: targetSize.width, height: CGFloat(2 * width)))
+              let correctHeight = collectionView.collectionViewLayout.collectionViewContentSize.height + verticalConstraint + channelImageHeightConstraint
+              let correctWidth =  collectionView.collectionViewLayout.collectionViewContentSize.width
+              
+               collectionView.reloadData()
+              
+              return CGSize(width: correctWidth, height: correctHeight)
     }
 }
 
 extension ChannelsTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        0
+        
+        if channel.channelType == .course {
+            return channel.latestMedia.count
+        } else {
+            return channel.channelType == .course ? channel.latestMedia.count : channel.series!.count
+
+        }
+        
+//        channel.channelType == .course ? channel.latestMedia.count : channel.series?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.id, for: indexPath) as? MediaCollectionViewCell {
-             
-            cell.channel = channel
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MediaCollectionViewCell.id, for: indexPath) as? MediaCollectionViewCell {
+            cell.channel = convertChannelToRepresentable(channel: channel, indexPath: indexPath)
+            
             
             return cell
          }
          return UICollectionViewCell()
     }
+    
+    private func convertChannelToRepresentable(channel: Channel, indexPath: IndexPath) -> ChannelRepresentable {
+        if channel.channelType == .course {
+            return ChannelRepresentable(title: channel.latestMedia[indexPath.row].title, imageUrl: channel.latestMedia[indexPath.row].coverAsset.url)
+        } else {
+           return ChannelRepresentable(title: channel.series![indexPath.row].title, imageUrl: channel.series![indexPath.row].coverAsset.url)
+        }
+    }
 }
 
 extension ChannelsTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let width = floor(((collectionView.frame.width) / columns) - (inset + spacing))
         
-        let width = collectionView.frame.width
-        let height = collectionView.frame.height
-
-        return CGSize(width: width, height: height)
+        let width = Int(collectionView.frame.width / 2)
+            
+        return CGSize(width: width, height: 2 * width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
+        return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

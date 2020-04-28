@@ -32,7 +32,7 @@ class MediaCollectionViewCell: UICollectionViewCell {
     var episode: Episodes! {
         didSet {
             
-            episodeBottomConstraint.priority = .defaultHigh
+            episodeBottomConstraint.priority = UILayoutPriority(rawValue: 999)
             channelBottomConstraint.priority = .defaultLow
 
             paragraphStyle.lineHeightMultiple = 1.05
@@ -43,24 +43,32 @@ class MediaCollectionViewCell: UICollectionViewCell {
             mediaImageView.getImage(urlString: episode.coverAsset.url) { (image, error) in
                 if let image = image {
                     self.mediaImageView.image = image
+                    self.contentView.setNeedsLayout()
                 }
             }
         }
     }
     
-    var channel: Channel! {
+    var channel: ChannelRepresentable! {
         didSet {
+            
+            channelBottomConstraint.priority = UILayoutPriority(rawValue: 999)
             episodeBottomConstraint.priority = .defaultLow
-            channelBottomConstraint.priority = .defaultHigh
-            mediaTitleLabel.text = channel.title ?? ""
-            //            channelTitleLabel.text =
+            mediaTitleLabel.text = channel.title
+            mediaImageView.getImage(urlString: channel.imageUrl) { (image, error) in
+                if let image = image {
+                    self.mediaImageView.image = image
+                    self.contentView.setNeedsLayout()
+                }
+                
+            }
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        addShadow()
+//        addShadow()
     }
     
     func addShadow() {

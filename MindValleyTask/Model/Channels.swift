@@ -66,3 +66,10 @@ enum ChannelType: String {
     case course = "episodes"
     case series = "series"
 }
+
+struct ChannelRepresentable: Codable {
+    
+    let title: String
+    let imageUrl: String
+}
+

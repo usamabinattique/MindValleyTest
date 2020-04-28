@@ -15,7 +15,6 @@ class ChannelViewModel: NSObject {
     private(set) var channels: [Channel] = []
     private(set) var categories: [Category] = []
     private(set) var episodes: [Episodes] = []
-
     
 }
 
@@ -44,6 +43,7 @@ extension ChannelViewModel {
               .then { (channelsRoot)  in
                 self.channels = channelsRoot.channels
                   NotificationCenter.default.post(name: .dataResponse, object: endPoint)
+                self.getCategories()
                   
           }.catch { (_) in
               //handle error, show alerts or display any sort of activity based on error
@@ -62,9 +62,9 @@ extension ChannelViewModel {
               //handle error, show alerts or display any sort of activity based on error
           }
     }
-    
-
 }
+
+// MARK: Retrieving Local Data
 
 extension ChannelViewModel {
 
@@ -80,6 +80,8 @@ extension ChannelViewModel {
         APIClient.shared.decodeLocalJsonFiles(localFileName: API.channels.localFileName, model: ChannelsData.self) { (response, error) in
             if let channels = response as? ChannelsData {
                 self.channels = channels.channels
+//                updateChannelContents()
+                
                 NotificationCenter.default.post(name: .dataResponse, object: API.channels)
 
             }
@@ -92,6 +94,47 @@ extension ChannelViewModel {
             }
         }
     }
+}
+
+private extension ChannelViewModel {
+    
+     func updateChannelContents() {
+        
+//
+//        let newChannelsArray = channels.map({ (channel) -> Channel in
+//
+//            var modified = channel
+//
+//            if channel.channelType == .course {
+//
+//                     let courseRepresentables = modified.latestMedia.compactMap {
+//                         convertChannelCourseContentToRepresentable(latestMedia: $0)
+//                     }
+//                     modified.channelContents?.append(contentsOf: courseRepresentables)
+//
+//                 } else {
+//                     let seriesRepresentables = modified.series!.compactMap {
+//                         convertChannelSeriesContentToRepresentable(series: $0)
+//                     }
+//                     modified.channelContents?.append(contentsOf: seriesRepresentables)
+//                 }
+//
+//            return modified
+//        })
+//
+//        channels = newChannelsArray
+//
+//        print(channels)
+    }
+    
+    func convertChannelCourseContentToRepresentable(latestMedia: LatestMedia) -> ChannelRepresentable {
+        ChannelRepresentable(title: latestMedia.title, imageUrl: latestMedia.coverAsset.url)
+    }
+    
+    func convertChannelSeriesContentToRepresentable(series: Series) -> ChannelRepresentable {
+        ChannelRepresentable(title: series.title, imageUrl: series.coverAsset.url)
+    }
+
 }
 
 extension ChannelViewModel: UITableViewDataSource {
@@ -118,16 +161,16 @@ extension ChannelViewModel: UITableViewDataSource {
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: EpisodesTableViewCell.id, for: indexPath) as? EpisodesTableViewCell {
                 cell.episodes = episodes
+        
                 return cell
             }
         case 1:
             
             if let cell = tableView.dequeueReusableCell(withIdentifier: ChannelsTableViewCell.id, for: indexPath) as? ChannelsTableViewCell {
                 
-                cell
+                cell.channel = channels[indexPath.row]
                 return cell
             }
-            
             
         default:
             if let cell = tableView.dequeueReusableCell(withIdentifier: CategoriesTableViewCell.id, for: indexPath) as? CategoriesTableViewCell {

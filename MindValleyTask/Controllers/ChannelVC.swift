@@ -34,20 +34,17 @@ class ChannelVC: UITableViewController {
     
     func initUI() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barTintColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
         title = "Channels"
-//
-//        view.layer.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1).cgColor
-//
-//        view.layer.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1).cgColor
-
     }
     
     func tableViewConfiguration() {
         tableView.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1)
-        tableView.estimatedRowHeight = 600
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
         tableView.dataSource = channelViewModel
+        tableView.delegate = self
         tableView.registerCell(withType: EpisodesTableViewCell.self)
         tableView.registerCell(withType: ChannelsTableViewCell.self)
         tableView.registerCell(withType: CategoriesTableViewCell.self)

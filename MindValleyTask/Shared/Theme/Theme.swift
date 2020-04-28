@@ -32,7 +32,6 @@ extension Theme {
     func extend() {
         HeadingOneLabel.appearance().with {
             $0.font = UIFont(defaultFontStyle: .regular, size: 20.0)
-            
             $0.textColor = .white
             $0.adjustsFontForContentSizeCategory = true
         }

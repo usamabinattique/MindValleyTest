@@ -11,7 +11,7 @@ import UIKit
 class CategoriesTableViewCell: SharedTableViewCell {
 
     let inset: CGFloat = 4
-    let spacing: CGFloat = 3
+    let interItemSpacing: CGFloat = 3
     
     var categories: [Category] = [] {
         didSet {
@@ -38,7 +38,8 @@ class CategoriesTableViewCell: SharedTableViewCell {
         headerLabel.text = "Browse by Categories"
         headerLabel.textColor = UIColor(red: 0.584, green: 0.596, blue: 0.616, alpha: 1)
         collectionView.backgroundColor = .clear
-
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        
     }
     
     func collectionViewConfiguration() {
@@ -47,6 +48,14 @@ class CategoriesTableViewCell: SharedTableViewCell {
         collectionView.delegate = self
         collectionView.isScrollEnabled = false
         collectionView.registerNib(cellNib: CategoriesCollectionViewCell.self)
+    }
+    
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+               let correctHeight = floor(headerLabel.intrinsicContentSize.height)
+             + 32 + collectionView.collectionViewLayout.collectionViewContentSize.height
+         let correctWidth =  collectionView.collectionViewLayout.collectionViewContentSize.width
+         collectionView.reloadData()
+         return CGSize(width: correctWidth, height: correctHeight)
     }
 }
 
@@ -68,21 +77,20 @@ extension CategoriesTableViewCell: UICollectionViewDataSource {
 }
 
 extension CategoriesTableViewCell: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let width = floor(((collectionView.frame.width) / columns) - (inset + spacing))
-        
-        let width = collectionView.frame.width
 
-        return CGSize(width: width * 0.45, height: 60)
+        let width = Int(((collectionView.frame.width - 40 ) / 2) - 2 * (inset + interItemSpacing))
+              
+          return CGSize(width: width, height: 60)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
+        return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-      return spacing
+      return interItemSpacing
     }
 }
 

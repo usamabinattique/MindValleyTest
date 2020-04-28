@@ -30,7 +30,7 @@ extension UIImageView {
                         KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil) { result in
                             switch result {
                             case .success(let value):
-                                print("Image: \(value.image). Got from: \(value.cacheType)")
+//                                print("Image: \(value.image). Got from: \(value.cacheType)")
                                 completion(value.image, nil)
                             case .failure(let error):
                                 print("Error: \(error)")
@@ -49,7 +49,7 @@ extension UIImageView {
             KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil) { result in
                 switch result {
                 case .success(let value):
-                    print("Image: \(value.image). Got from: \(value.cacheType)")
+//                    print("Image: \(value.image). Got from: \(value.cacheType)")
                     completion(value.image, nil)
                 case .failure(let error):
                     print("Error: \(error)")
