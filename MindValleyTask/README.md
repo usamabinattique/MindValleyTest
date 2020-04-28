@@ -12,7 +12,7 @@
 
 What part of the test did i find chanllenging?
 
-The design aspect of the test was the hardest, because i had to incorporate collection view in table view cells and to return the correct width and height, i had to do R&D in order to acheive the desired output. i tried several things like layoutDidLayoutSubviews among other methods but this helped me in learning how to dynamically update the size, and correctly configure the settings for the output. 
+The design aspect of the test was the hardest, because i had to incorporate collection view in table view cells and to return the correct width and height, i had to do R&D in order to acheive the desired output. i tried several things like layoutDidLayoutSubviews among other methods but this helped me in learning how to dynamically update the size, and correctly configure the settings for the output. This is one of the most challenging assignments i've done so far.
 
 
 what feature would i like to improve ? 
