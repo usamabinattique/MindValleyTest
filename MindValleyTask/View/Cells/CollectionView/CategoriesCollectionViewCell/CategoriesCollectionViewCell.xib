@@ -16,24 +16,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="147" height="71"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csn-LY-iWf" customClass="HeadingTwoLabel" customModule="MindValleyTask" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ef2-PM-6Vc">
                         <rect key="frame" x="0.0" y="0.0" width="147" height="71"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csn-LY-iWf" customClass="HeadingTwoLabel" customModule="MindValleyTask" customModuleProvider="target">
+                                <rect key="frame" x="52.5" y="25.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Csn-LY-iWf" firstAttribute="centerY" secondItem="ef2-PM-6Vc" secondAttribute="centerY" id="dnT-F2-Jod"/>
+                            <constraint firstItem="Csn-LY-iWf" firstAttribute="centerX" secondItem="ef2-PM-6Vc" secondAttribute="centerX" id="lT5-iD-QZ9"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Csn-LY-iWf" secondAttribute="bottom" id="PtX-3B-k1i"/>
-                <constraint firstAttribute="trailing" secondItem="Csn-LY-iWf" secondAttribute="trailing" id="R3w-6R-vie"/>
-                <constraint firstItem="Csn-LY-iWf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ata-0V-k6W"/>
-                <constraint firstItem="Csn-LY-iWf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="i7X-Ja-eaf"/>
+                <constraint firstAttribute="bottom" secondItem="ef2-PM-6Vc" secondAttribute="bottom" id="C7h-aM-Gk7"/>
+                <constraint firstItem="ef2-PM-6Vc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mOt-1T-cgX"/>
+                <constraint firstAttribute="trailing" secondItem="ef2-PM-6Vc" secondAttribute="trailing" id="vzR-Pc-pXd"/>
+                <constraint firstItem="ef2-PM-6Vc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="z6w-OD-zHz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="147" height="71"/>
             <connections>
-                <outlet property="nameLabel" destination="Csn-LY-iWf" id="MWa-LW-8I0"/>
+                <outlet property="labelView" destination="ef2-PM-6Vc" id="V0R-qQ-Sfk"/>
+                <outlet property="nameLabel" destination="Csn-LY-iWf" id="gch-Xf-DHc"/>
             </connections>
             <point key="canvasLocation" x="66" y="101"/>
         </collectionViewCell>

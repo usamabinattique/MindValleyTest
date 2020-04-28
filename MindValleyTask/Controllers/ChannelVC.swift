@@ -19,7 +19,6 @@ class ChannelVC: UITableViewController {
         channelViewModel = ChannelViewModel()
         initUI()
         tableViewConfiguration()
-        view.layer.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1).cgColor
         channelViewModel.getDataFromLocalJsonFiles()
     }
     
@@ -33,8 +32,10 @@ class ChannelVC: UITableViewController {
     }
     
     func initUI() {
+        view.layer.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1).cgColor
+        navigationController?.navigationBar.tintColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1)
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.barTintColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+//        navigationController?.navigationBar.barTintColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
         title = "Channels"
     }
     

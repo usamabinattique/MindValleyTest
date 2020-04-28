@@ -38,7 +38,7 @@ extension Theme {
         
         HeadingTwoLabel.appearance().with {
             $0.font = UIFont(defaultFontStyle: .regular, size: 18.0)
-            $0.textColor = .black
+            $0.textColor = .white
         }
     }
 }

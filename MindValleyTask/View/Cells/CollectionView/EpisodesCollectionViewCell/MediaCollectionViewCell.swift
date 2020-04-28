@@ -43,9 +43,9 @@ class MediaCollectionViewCell: UICollectionViewCell {
             mediaImageView.getImage(urlString: episode.coverAsset.url) { (image, error) in
                 if let image = image {
                     self.mediaImageView.image = image
-                    self.contentView.setNeedsLayout()
                 }
             }
+            contentView.setNeedsLayout()
         }
     }
     
@@ -55,13 +55,13 @@ class MediaCollectionViewCell: UICollectionViewCell {
             channelBottomConstraint.priority = UILayoutPriority(rawValue: 999)
             episodeBottomConstraint.priority = .defaultLow
             mediaTitleLabel.text = channel.title
+            channelTitleLabel.text?.removeAll()
             mediaImageView.getImage(urlString: channel.imageUrl) { (image, error) in
                 if let image = image {
                     self.mediaImageView.image = image
-                    self.contentView.setNeedsLayout()
                 }
-                
             }
+            contentView.setNeedsLayout()
         }
     }
     

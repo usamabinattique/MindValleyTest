@@ -8,15 +8,15 @@
 
 import UIKit
 
-class EpisodesTableViewCell: SharedTableViewCell {
+class EpisodesTableViewCell: BaseTableViewCell {
     
     let inset: CGFloat = 4
-    let spacing: CGFloat = 3
+    let interItemSpacing: CGFloat = 3
 
     var episodes: [Episodes] = [] {
         didSet {
             collectionView.reloadData()
-            layoutIfNeeded()
+            setNeedsLayout()
         }
     }
 
@@ -27,13 +27,27 @@ class EpisodesTableViewCell: SharedTableViewCell {
         initUI()
         collectionViewConfiguration()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+
+        let cellWidth = Int(((collectionView.frame.width) / 2) - (inset + interItemSpacing))
+        
+        collectionView.frame = CGRect.init(origin: .zero, size: CGSize(width: targetSize.width, height: CGFloat(cellWidth * 2)))
+
+        let absoluteHeight = collectionView.collectionViewLayout.collectionViewContentSize.height + floor(self.headerLabel.intrinsicContentSize.height) + 30
+
+        let absoluteWidth =  collectionView.collectionViewLayout.collectionViewContentSize.width
+
+        collectionView.reloadData()
+        layoutIfNeeded()
+
+        return CGSize(width: absoluteWidth, height: absoluteHeight)
+    }
+}
+
+// MARK: Helper Methods
+
+private extension EpisodesTableViewCell {
     func initUI() {
         
         contentView.backgroundColor = Constants.AppColors.tableCellsBackground
@@ -49,37 +63,12 @@ class EpisodesTableViewCell: SharedTableViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerNib(cellNib: MediaCollectionViewCell.self)
-//        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
 
-    }
-    
-    override func layoutSubviews() {
-        
-        super.layoutSubviews()
-        
-//            self.collectionView.constant = self.collectionView.collectionViewLayout.collectionViewContentSize.height
-
-    }
-    
-    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
-
-        let cellWidth = Int(((collectionView.frame.width) / 2) - (inset + spacing))
-        
-//        let constraintVertical: CGFloat = 30.0
-
-        collectionView.layoutIfNeeded()
-        collectionView.frame = CGRect.init(origin: .zero, size: CGSize(width: targetSize.width, height: CGFloat(cellWidth * 2)))
-
-        let absoluteHeight = collectionView.collectionViewLayout.collectionViewContentSize.height + floor(self.headerLabel.intrinsicContentSize.height)
-
-        let absoluteWidth =  collectionView.collectionViewLayout.collectionViewContentSize.width
-
-        collectionView.reloadData()
-//        collectionView.layoutIfNeeded()
-
-        return CGSize(width: absoluteWidth, height: absoluteHeight)
     }
 }
+
+// MARK: UICollectionView DataSource
 
 extension EpisodesTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -100,19 +89,18 @@ extension EpisodesTableViewCell: UICollectionViewDataSource {
 extension EpisodesTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        let width = Int(((collectionView.frame.width) / 2) - (inset + spacing))
-
+        
+        let width = Int(((collectionView.frame.width) / 2) - (inset + interItemSpacing))
+        
         return CGSize(width: width, height: width * 2)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 15)
+        UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-
-      return 0
+        interItemSpacing
     }
 }
 

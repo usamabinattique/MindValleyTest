@@ -17,16 +17,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTA-If-7gE" customClass="HeadingOneLabel" customModule="MindValleyTask" customModuleProvider="target">
-                        <rect key="frame" x="20" y="30" width="42" height="21"/>
+                        <rect key="frame" x="20" y="16" width="293" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SQ5-gd-TMZ">
-                        <rect key="frame" x="0.0" y="66" width="313" height="136"/>
+                        <rect key="frame" x="0.0" y="52" width="313" height="150"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AVp-4j-up5">
-                            <size key="itemSize" width="128" height="128"/>
+                            <size key="itemSize" width="60" height="60"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -36,7 +36,8 @@
                 <constraints>
                     <constraint firstItem="iTA-If-7gE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1ce-Ji-dtk"/>
                     <constraint firstItem="SQ5-gd-TMZ" firstAttribute="top" secondItem="iTA-If-7gE" secondAttribute="bottom" constant="15" id="QHC-Ya-9ls"/>
-                    <constraint firstItem="iTA-If-7gE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="Yd9-SX-pAU"/>
+                    <constraint firstItem="iTA-If-7gE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Yd9-SX-pAU"/>
+                    <constraint firstAttribute="trailing" secondItem="iTA-If-7gE" secondAttribute="trailing" id="gkg-mc-zpG"/>
                     <constraint firstAttribute="bottom" secondItem="SQ5-gd-TMZ" secondAttribute="bottom" id="r8c-gb-TEN"/>
                     <constraint firstAttribute="trailing" secondItem="SQ5-gd-TMZ" secondAttribute="trailing" id="uar-kL-n0c"/>
                     <constraint firstItem="SQ5-gd-TMZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="z1e-xw-F9C"/>

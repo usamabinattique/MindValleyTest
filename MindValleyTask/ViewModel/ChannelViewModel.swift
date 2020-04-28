@@ -98,35 +98,6 @@ extension ChannelViewModel {
 
 private extension ChannelViewModel {
     
-     func updateChannelContents() {
-        
-//
-//        let newChannelsArray = channels.map({ (channel) -> Channel in
-//
-//            var modified = channel
-//
-//            if channel.channelType == .course {
-//
-//                     let courseRepresentables = modified.latestMedia.compactMap {
-//                         convertChannelCourseContentToRepresentable(latestMedia: $0)
-//                     }
-//                     modified.channelContents?.append(contentsOf: courseRepresentables)
-//
-//                 } else {
-//                     let seriesRepresentables = modified.series!.compactMap {
-//                         convertChannelSeriesContentToRepresentable(series: $0)
-//                     }
-//                     modified.channelContents?.append(contentsOf: seriesRepresentables)
-//                 }
-//
-//            return modified
-//        })
-//
-//        channels = newChannelsArray
-//
-//        print(channels)
-    }
-    
     func convertChannelCourseContentToRepresentable(latestMedia: LatestMedia) -> ChannelRepresentable {
         ChannelRepresentable(title: latestMedia.title, imageUrl: latestMedia.coverAsset.url)
     }

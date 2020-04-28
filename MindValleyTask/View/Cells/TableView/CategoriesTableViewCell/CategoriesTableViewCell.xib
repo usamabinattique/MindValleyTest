@@ -23,9 +23,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nam-y8-EzG">
-                        <rect key="frame" x="0.0" y="59" width="435" height="161"/>
+                        <rect key="frame" x="0.0" y="66" width="435" height="154"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cfV-82-Um2">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cfV-82-Um2">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -36,7 +36,7 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="nam-y8-EzG" secondAttribute="bottom" id="EVJ-Zh-ZMF"/>
                     <constraint firstItem="Lf8-CL-Ggo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Kc1-6N-ubA"/>
-                    <constraint firstItem="nam-y8-EzG" firstAttribute="top" secondItem="Lf8-CL-Ggo" secondAttribute="bottom" constant="8" id="L5E-b1-oOf"/>
+                    <constraint firstItem="nam-y8-EzG" firstAttribute="top" secondItem="Lf8-CL-Ggo" secondAttribute="bottom" constant="15" id="L5E-b1-oOf"/>
                     <constraint firstItem="Lf8-CL-Ggo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="c6B-ye-TUS"/>
                     <constraint firstAttribute="trailing" secondItem="nam-y8-EzG" secondAttribute="trailing" id="hQG-wb-N3h"/>
                     <constraint firstItem="nam-y8-EzG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="w0e-h0-zix"/>

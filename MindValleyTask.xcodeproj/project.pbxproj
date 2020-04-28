@@ -70,7 +70,7 @@
 		50FCC4E62443C15600B62E98 /* EpisodesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FCC4E42443C15600B62E98 /* EpisodesTableViewCell.xib */; };
 		50FCC4EB2443C1DD00B62E98 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4E92443C1DD00B62E98 /* CategoriesCollectionViewCell.swift */; };
 		50FCC4EC2443C1DD00B62E98 /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FCC4EA2443C1DD00B62E98 /* CategoriesCollectionViewCell.xib */; };
-		50FCC4EE2443C2C800B62E98 /* SharedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4ED2443C2C800B62E98 /* SharedTableViewCell.swift */; };
+		50FCC4EE2443C2C800B62E98 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4ED2443C2C800B62E98 /* BaseTableViewCell.swift */; };
 		50FCC4F22443C36400B62E98 /* MediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4F02443C36400B62E98 /* MediaCollectionViewCell.swift */; };
 		50FCC4F32443C36400B62E98 /* MediaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FCC4F12443C36400B62E98 /* MediaCollectionViewCell.xib */; };
 		50FCC4F72443CC0300B62E98 /* ChannelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4F52443CC0300B62E98 /* ChannelsTableViewCell.swift */; };
@@ -167,7 +167,7 @@
 		50FCC4E42443C15600B62E98 /* EpisodesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesTableViewCell.xib; sourceTree = "<group>"; };
 		50FCC4E92443C1DD00B62E98 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		50FCC4EA2443C1DD00B62E98 /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
-		50FCC4ED2443C2C800B62E98 /* SharedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTableViewCell.swift; sourceTree = "<group>"; };
+		50FCC4ED2443C2C800B62E98 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		50FCC4F02443C36400B62E98 /* MediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewCell.swift; sourceTree = "<group>"; };
 		50FCC4F12443C36400B62E98 /* MediaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCollectionViewCell.xib; sourceTree = "<group>"; };
 		50FCC4F52443CC0300B62E98 /* ChannelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsTableViewCell.swift; sourceTree = "<group>"; };
@@ -387,7 +387,7 @@
 		5061471924423E9400A78409 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				50FCC4ED2443C2C800B62E98 /* SharedTableViewCell.swift */,
+				50FCC4ED2443C2C800B62E98 /* BaseTableViewCell.swift */,
 				50FCC4E22443C14000B62E98 /* EpisodedTableViewCell */,
 				50FCC4F42443CBDE00B62E98 /* ChannelsTableViewCell */,
 				50745A9324437DC700BC74FB /* CategoriesTableViewCell */,
@@ -869,7 +869,7 @@
 				5061471424423C3100A78409 /* Channels.swift in Sources */,
 				506146CA2442333E00A78409 /* SceneDelegate.swift in Sources */,
 				50614703244237C900A78409 /* APIClient.swift in Sources */,
-				50FCC4EE2443C2C800B62E98 /* SharedTableViewCell.swift in Sources */,
+				50FCC4EE2443C2C800B62E98 /* BaseTableViewCell.swift in Sources */,
 				50FCC4DF24438B1900B62E98 /* UILabel.swift in Sources */,
 				50614705244237DA00A78409 /* JSONDecoder.swift in Sources */,
 				50FCC4E52443C15600B62E98 /* EpisodesTableViewCell.swift in Sources */,
@@ -1066,7 +1066,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.usama.MindValleyTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1084,7 +1084,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.usama.MindValleyTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoriesTableViewCell: SharedTableViewCell {
+class CategoriesTableViewCell: BaseTableViewCell {
 
     let inset: CGFloat = 4
     let interItemSpacing: CGFloat = 3
@@ -35,10 +35,11 @@ class CategoriesTableViewCell: SharedTableViewCell {
     func initUI() {
         
         contentView.backgroundColor = Constants.AppColors.tableCellsBackground
-        headerLabel.text = "Browse by Categories"
+    
+        headerLabel.attributedText = NSMutableAttributedString(string: "Browse by categories", attributes: [.kern: 0.4])
         headerLabel.textColor = UIColor(red: 0.584, green: 0.596, blue: 0.616, alpha: 1)
         collectionView.backgroundColor = .clear
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
         
     }
     
@@ -46,16 +47,17 @@ class CategoriesTableViewCell: SharedTableViewCell {
         
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.isScrollEnabled = false
         collectionView.registerNib(cellNib: CategoriesCollectionViewCell.self)
     }
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
-               let correctHeight = floor(headerLabel.intrinsicContentSize.height)
-             + 32 + collectionView.collectionViewLayout.collectionViewContentSize.height
-         let correctWidth =  collectionView.collectionViewLayout.collectionViewContentSize.width
-         collectionView.reloadData()
-         return CGSize(width: correctWidth, height: correctHeight)
+        
+        let correctHeight = floor(headerLabel.intrinsicContentSize.height)
+         + collectionView.collectionViewLayout.collectionViewContentSize.height + 50
+        let correctWidth =  collectionView.collectionViewLayout.collectionViewContentSize.width
+        collectionView.reloadData()
+        collectionView.layoutIfNeeded()
+        return CGSize(width: correctWidth, height: correctHeight)
     }
 }
 
