@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C696427F60AED4E8549356D /* Pods_MindValleyTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71920039B9DF9CA2197741 /* Pods_MindValleyTask.framework */; };
-		24ADCBF749B7B7839199844E /* Pods_MindValleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCF8BE955607464E4688E79 /* Pods_MindValleyTaskTests.framework */; };
+		2E6145822F2DA12EB6A7FAE8 /* Pods_MindValleyTask_MindValleyTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C82873C4405E55A661C6319 /* Pods_MindValleyTask_MindValleyTaskUITests.framework */; };
+		5016B6787924FC79E839F840 /* Pods_MindValleyTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2D737489E993C48E4F8AC8 /* Pods_MindValleyTask.framework */; };
 		503A50C424508F06003291C2 /* Channels.json in Resources */ = {isa = PBXBuildFile; fileRef = 503A50C124508F06003291C2 /* Channels.json */; };
 		503A50C524508F06003291C2 /* NewEpisodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 503A50C224508F06003291C2 /* NewEpisodes.json */; };
 		503A50C624508F06003291C2 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 503A50C324508F06003291C2 /* Categories.json */; };
@@ -86,7 +86,7 @@
 		50FCC4F32443C36400B62E98 /* MediaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FCC4F12443C36400B62E98 /* MediaCollectionViewCell.xib */; };
 		50FCC4F72443CC0300B62E98 /* ChannelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCC4F52443CC0300B62E98 /* ChannelsTableViewCell.swift */; };
 		50FCC4F82443CC0300B62E98 /* ChannelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FCC4F62443CC0300B62E98 /* ChannelsTableViewCell.xib */; };
-		9D02EEA1118BDD4005259EAF /* Pods_MindValleyTask_MindValleyTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7AF0ABDEBE952477654D67 /* Pods_MindValleyTask_MindValleyTaskUITests.framework */; };
+		E6D0EF0C249ABB126AD6452C /* Pods_MindValleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C19510F1CE8E1B15C0C3A2C /* Pods_MindValleyTaskTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,10 +107,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13132F21520DB9711EB1BB4F /* Pods-MindValleyTask-MindValleyTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask-MindValleyTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-MindValleyTask-MindValleyTaskUITests/Pods-MindValleyTask-MindValleyTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
-		23E4EE2F0935E791005E8158 /* Pods-MindValleyTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
-		40AD829D4A49AA8D02BDA236 /* Pods-MindValleyTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask.debug.xcconfig"; sourceTree = "<group>"; };
-		4390A2480D03B917F248D149 /* Pods-MindValleyTask-MindValleyTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask-MindValleyTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTask-MindValleyTaskUITests/Pods-MindValleyTask-MindValleyTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0AD8F59FCB90EDABBB463BCC /* Pods-MindValleyTask-MindValleyTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask-MindValleyTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTask-MindValleyTaskUITests/Pods-MindValleyTask-MindValleyTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1C19510F1CE8E1B15C0C3A2C /* Pods_MindValleyTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2D737489E993C48E4F8AC8 /* Pods_MindValleyTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C82873C4405E55A661C6319 /* Pods_MindValleyTask_MindValleyTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyTask_MindValleyTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		503A50C124508F06003291C2 /* Channels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Channels.json; sourceTree = "<group>"; };
 		503A50C224508F06003291C2 /* NewEpisodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NewEpisodes.json; sourceTree = "<group>"; };
 		503A50C324508F06003291C2 /* Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
@@ -194,11 +194,11 @@
 		50FCC4F12443C36400B62E98 /* MediaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCollectionViewCell.xib; sourceTree = "<group>"; };
 		50FCC4F52443CC0300B62E98 /* ChannelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsTableViewCell.swift; sourceTree = "<group>"; };
 		50FCC4F62443CC0300B62E98 /* ChannelsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelsTableViewCell.xib; sourceTree = "<group>"; };
-		8879B6EC618DE6D0A3B64D90 /* Pods-MindValleyTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTaskTests.release.xcconfig"; path = "Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests.release.xcconfig"; sourceTree = "<group>"; };
-		8C7AF0ABDEBE952477654D67 /* Pods_MindValleyTask_MindValleyTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyTask_MindValleyTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E471CA35D6DA95508F4A8E9 /* Pods-MindValleyTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask.release.xcconfig"; path = "Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask.release.xcconfig"; sourceTree = "<group>"; };
-		CE71920039B9DF9CA2197741 /* Pods_MindValleyTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBCF8BE955607464E4688E79 /* Pods_MindValleyTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		739D45B87DC31222CC91AFC4 /* Pods-MindValleyTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask.release.xcconfig"; path = "Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask.release.xcconfig"; sourceTree = "<group>"; };
+		79CCBE1B57139260228C089E /* Pods-MindValleyTask-MindValleyTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask-MindValleyTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-MindValleyTask-MindValleyTaskUITests/Pods-MindValleyTask-MindValleyTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		978473B90F3FFCBAFFCDDCDF /* Pods-MindValleyTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTaskTests.release.xcconfig"; path = "Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		9AB37A15F75A62C25AC45BBA /* Pods-MindValleyTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask.debug.xcconfig"; sourceTree = "<group>"; };
+		BBD6D4749A8DB80DDBC5CE19 /* Pods-MindValleyTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C696427F60AED4E8549356D /* Pods_MindValleyTask.framework in Frameworks */,
+				5016B6787924FC79E839F840 /* Pods_MindValleyTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24ADCBF749B7B7839199844E /* Pods_MindValleyTaskTests.framework in Frameworks */,
+				E6D0EF0C249ABB126AD6452C /* Pods_MindValleyTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D02EEA1118BDD4005259EAF /* Pods_MindValleyTask_MindValleyTaskUITests.framework in Frameworks */,
+				2E6145822F2DA12EB6A7FAE8 /* Pods_MindValleyTask_MindValleyTaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,12 +232,12 @@
 		3BC94255DC6B3B0579B321A8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				40AD829D4A49AA8D02BDA236 /* Pods-MindValleyTask.debug.xcconfig */,
-				9E471CA35D6DA95508F4A8E9 /* Pods-MindValleyTask.release.xcconfig */,
-				4390A2480D03B917F248D149 /* Pods-MindValleyTask-MindValleyTaskUITests.debug.xcconfig */,
-				13132F21520DB9711EB1BB4F /* Pods-MindValleyTask-MindValleyTaskUITests.release.xcconfig */,
-				23E4EE2F0935E791005E8158 /* Pods-MindValleyTaskTests.debug.xcconfig */,
-				8879B6EC618DE6D0A3B64D90 /* Pods-MindValleyTaskTests.release.xcconfig */,
+				9AB37A15F75A62C25AC45BBA /* Pods-MindValleyTask.debug.xcconfig */,
+				739D45B87DC31222CC91AFC4 /* Pods-MindValleyTask.release.xcconfig */,
+				0AD8F59FCB90EDABBB463BCC /* Pods-MindValleyTask-MindValleyTaskUITests.debug.xcconfig */,
+				79CCBE1B57139260228C089E /* Pods-MindValleyTask-MindValleyTaskUITests.release.xcconfig */,
+				BBD6D4749A8DB80DDBC5CE19 /* Pods-MindValleyTaskTests.debug.xcconfig */,
+				978473B90F3FFCBAFFCDDCDF /* Pods-MindValleyTaskTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 				506146E82442334900A78409 /* MindValleyTaskUITests */,
 				506146C52442333E00A78409 /* Products */,
 				3BC94255DC6B3B0579B321A8 /* Pods */,
-				64A14A529FA488ED09337488 /* Frameworks */,
+				F791F85F5D4F9842B2945AD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -605,12 +605,12 @@
 			path = ChannelsTableViewCell;
 			sourceTree = "<group>";
 		};
-		64A14A529FA488ED09337488 /* Frameworks */ = {
+		F791F85F5D4F9842B2945AD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE71920039B9DF9CA2197741 /* Pods_MindValleyTask.framework */,
-				8C7AF0ABDEBE952477654D67 /* Pods_MindValleyTask_MindValleyTaskUITests.framework */,
-				EBCF8BE955607464E4688E79 /* Pods_MindValleyTaskTests.framework */,
+				3B2D737489E993C48E4F8AC8 /* Pods_MindValleyTask.framework */,
+				4C82873C4405E55A661C6319 /* Pods_MindValleyTask_MindValleyTaskUITests.framework */,
+				1C19510F1CE8E1B15C0C3A2C /* Pods_MindValleyTaskTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -622,11 +622,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 506146EE2442334900A78409 /* Build configuration list for PBXNativeTarget "MindValleyTask" */;
 			buildPhases = (
-				FD3DD7515362894E60F9CFD1 /* [CP] Check Pods Manifest.lock */,
+				6D830255A1EB8D9B0D5A89BF /* [CP] Check Pods Manifest.lock */,
 				506146C02442333E00A78409 /* Sources */,
 				506146C12442333E00A78409 /* Frameworks */,
 				506146C22442333E00A78409 /* Resources */,
-				4969943A671D2E50173D076A /* [CP] Embed Pods Frameworks */,
+				43B43584F03955DA42F9D300 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -641,11 +641,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 506146F12442334900A78409 /* Build configuration list for PBXNativeTarget "MindValleyTaskTests" */;
 			buildPhases = (
-				EB7DCB513DC104E55CE94EB5 /* [CP] Check Pods Manifest.lock */,
+				5881EF49778CCB05DD40AA05 /* [CP] Check Pods Manifest.lock */,
 				506146D62442334900A78409 /* Sources */,
 				506146D72442334900A78409 /* Frameworks */,
 				506146D82442334900A78409 /* Resources */,
-				2B26C5E48443BA34A0A60B88 /* [CP] Embed Pods Frameworks */,
+				627483497D534726D6168B81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -661,11 +661,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 506146F42442334900A78409 /* Build configuration list for PBXNativeTarget "MindValleyTaskUITests" */;
 			buildPhases = (
-				444ED752026C4D3FC1583535 /* [CP] Check Pods Manifest.lock */,
+				1533A45B258DAEED2AC2EC10 /* [CP] Check Pods Manifest.lock */,
 				506146E12442334900A78409 /* Sources */,
 				506146E22442334900A78409 /* Frameworks */,
 				506146E32442334900A78409 /* Resources */,
-				D667867FFC4A7E553C4A0A09 /* [CP] Embed Pods Frameworks */,
+				568D9DBCF780551A36B5A2A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -773,24 +773,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B26C5E48443BA34A0A60B88 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		444ED752026C4D3FC1583535 /* [CP] Check Pods Manifest.lock */ = {
+		1533A45B258DAEED2AC2EC10 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -812,7 +795,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4969943A671D2E50173D076A /* [CP] Embed Pods Frameworks */ = {
+		43B43584F03955DA42F9D300 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -829,7 +812,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D667867FFC4A7E553C4A0A09 /* [CP] Embed Pods Frameworks */ = {
+		568D9DBCF780551A36B5A2A6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -846,7 +829,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindValleyTask-MindValleyTaskUITests/Pods-MindValleyTask-MindValleyTaskUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EB7DCB513DC104E55CE94EB5 /* [CP] Check Pods Manifest.lock */ = {
+		5881EF49778CCB05DD40AA05 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -868,7 +851,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD3DD7515362894E60F9CFD1 /* [CP] Check Pods Manifest.lock */ = {
+		627483497D534726D6168B81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindValleyTaskTests/Pods-MindValleyTaskTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D830255A1EB8D9B0D5A89BF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1114,7 +1114,7 @@
 		};
 		506146EF2442334900A78409 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40AD829D4A49AA8D02BDA236 /* Pods-MindValleyTask.debug.xcconfig */;
+			baseConfigurationReference = 9AB37A15F75A62C25AC45BBA /* Pods-MindValleyTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1132,7 +1132,7 @@
 		};
 		506146F02442334900A78409 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E471CA35D6DA95508F4A8E9 /* Pods-MindValleyTask.release.xcconfig */;
+			baseConfigurationReference = 739D45B87DC31222CC91AFC4 /* Pods-MindValleyTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1150,7 +1150,7 @@
 		};
 		506146F22442334900A78409 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23E4EE2F0935E791005E8158 /* Pods-MindValleyTaskTests.debug.xcconfig */;
+			baseConfigurationReference = BBD6D4749A8DB80DDBC5CE19 /* Pods-MindValleyTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1172,7 +1172,7 @@
 		};
 		506146F32442334900A78409 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8879B6EC618DE6D0A3B64D90 /* Pods-MindValleyTaskTests.release.xcconfig */;
+			baseConfigurationReference = 978473B90F3FFCBAFFCDDCDF /* Pods-MindValleyTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1194,7 +1194,7 @@
 		};
 		506146F52442334900A78409 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4390A2480D03B917F248D149 /* Pods-MindValleyTask-MindValleyTaskUITests.debug.xcconfig */;
+			baseConfigurationReference = 0AD8F59FCB90EDABBB463BCC /* Pods-MindValleyTask-MindValleyTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1214,7 +1214,7 @@
 		};
 		506146F62442334900A78409 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13132F21520DB9711EB1BB4F /* Pods-MindValleyTask-MindValleyTaskUITests.release.xcconfig */;
+			baseConfigurationReference = 79CCBE1B57139260228C089E /* Pods-MindValleyTask-MindValleyTaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

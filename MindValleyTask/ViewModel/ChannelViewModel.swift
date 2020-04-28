@@ -107,8 +107,6 @@ extension ChannelViewModel {
         APIClient.shared.decodeLocalJsonFiles(localFileName: API.channels.localFileName, model: ChannelsData.self) { (response, error) in
             if let channels = response as? ChannelsData {
                 self.channels = channels.channels
-//                updateChannelContents()
-                
                 NotificationCenter.default.post(name: .dataResponse, object: API.channels)
 
             }
@@ -121,18 +119,6 @@ extension ChannelViewModel {
             }
         }
     }
-}
-
-private extension ChannelViewModel {
-    
-    func convertChannelCourseContentToRepresentable(latestMedia: LatestMedia) -> ChannelRepresentable {
-        ChannelRepresentable(title: latestMedia.title, imageUrl: latestMedia.coverAsset.url)
-    }
-    
-    func convertChannelSeriesContentToRepresentable(series: Series) -> ChannelRepresentable {
-        ChannelRepresentable(title: series.title, imageUrl: series.coverAsset.url)
-    }
-
 }
 
 // MARK: UI TableView Data Source
@@ -160,8 +146,8 @@ extension ChannelViewModel: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: EpisodesTableViewCell.id, for: indexPath) as? EpisodesTableViewCell {
+                
                 cell.episodes = episodes
-        
                 return cell
             }
         case 1:
@@ -174,6 +160,7 @@ extension ChannelViewModel: UITableViewDataSource {
             
         default:
             if let cell = tableView.dequeueReusableCell(withIdentifier: CategoriesTableViewCell.id, for: indexPath) as? CategoriesTableViewCell {
+                
                 cell.categories = categories
                 return cell
             }

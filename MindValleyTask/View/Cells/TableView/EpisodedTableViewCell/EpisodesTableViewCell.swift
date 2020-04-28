@@ -16,7 +16,7 @@ class EpisodesTableViewCell: BaseTableViewCell {
     var episodes: [Episodes] = [] {
         didSet {
             collectionView.reloadData()
-            setNeedsLayout()
+            layoutIfNeeded()
         }
     }
 
@@ -34,12 +34,12 @@ class EpisodesTableViewCell: BaseTableViewCell {
         
         collectionView.frame = CGRect.init(origin: .zero, size: CGSize(width: targetSize.width, height: CGFloat(cellWidth * 2)))
 
-        let absoluteHeight = collectionView.collectionViewLayout.collectionViewContentSize.height + floor(self.headerLabel.intrinsicContentSize.height) + 30
+        let absoluteHeight = collectionView.collectionViewLayout.collectionViewContentSize.height + floor(self.headerLabel.intrinsicContentSize.height) + 60
 
         let absoluteWidth =  collectionView.collectionViewLayout.collectionViewContentSize.width
 
         collectionView.reloadData()
-        layoutIfNeeded()
+//        layoutIfNeeded()
 
         return CGSize(width: absoluteWidth, height: absoluteHeight)
     }

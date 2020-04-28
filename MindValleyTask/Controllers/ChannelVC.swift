@@ -19,6 +19,10 @@ class ChannelVC: UITableViewController {
         channelViewModel = ChannelViewModel()
         initUI()
         tableViewConfiguration()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         channelViewModel.getDataFromLocalJsonFiles()
     }
     
@@ -30,25 +34,24 @@ class ChannelVC: UITableViewController {
             NotificationCenter.default.removeObserver(current)
         }
     }
+}
+
+extension ChannelVC {
     
     func initUI() {
         view.layer.backgroundColor = Constants.AppColors.appBackground.cgColor
-        navigationController?.navigationBar.tintColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1)
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.barTintColor = Constants.AppColors.appBackground
         navigationController?.navigationBar.isTranslucent = true
-
-//        navigationController?.navigationBar.barTintColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
         title = "Channels"
     }
     
     func tableViewConfiguration() {
-        tableView.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1)
-        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.backgroundColor = Constants.AppColors.appBackground
+        tableView.estimatedRowHeight = 450
         tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
         tableView.dataSource = channelViewModel
-        tableView.delegate = self
         tableView.registerCell(withType: EpisodesTableViewCell.self)
         tableView.registerCell(withType: ChannelsTableViewCell.self)
         tableView.registerCell(withType: CategoriesTableViewCell.self)

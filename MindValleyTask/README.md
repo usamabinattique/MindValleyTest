@@ -12,6 +12,8 @@
 
 The pods have been deintegrated, Please initialze pods and do a pod install before running the project
 
+I have written the network layer by the name of API. and also written methods using Google Promises for asynchronous operations. they can be tested by replacing the data fetching method in ChannelVC, but since i have not been able to test the calls and the response, so i am not sure about the stability of them. the code is working fine with the local files. 
+
 
 What part of the test did i find chanllenging?
 

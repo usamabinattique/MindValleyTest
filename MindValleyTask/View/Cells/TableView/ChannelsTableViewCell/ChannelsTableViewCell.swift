@@ -59,10 +59,8 @@ class ChannelsTableViewCell: BaseTableViewCell {
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
         
         let verticaConstantForLabels: CGFloat = 30
-//        let width = Int(((collectionView.frame.width) / 2))
         
         let width: CGFloat = CGFloat(channel.channelType == .course ? Int(collectionView.frame.width / 2) : Int(collectionView.frame.width / 1.15))
-        //        let width = Int(collectionView.frame.width / 2)
                             
         collectionView.frame = CGRect.init(origin: .zero, size: CGSize(width: targetSize.width, height: width * heightForChannelType))
         let absoluteHeight = collectionView.collectionViewLayout.collectionViewContentSize.height + floor(self.headerLabel.intrinsicContentSize.height) + verticaConstantForLabels + 60

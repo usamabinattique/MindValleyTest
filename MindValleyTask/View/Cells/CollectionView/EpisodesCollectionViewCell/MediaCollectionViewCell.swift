@@ -15,13 +15,13 @@ class MediaCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var mediaTitleLabel: UILabel! {
         didSet {
-            mediaTitleLabel.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            (mediaTitleLabel as? HeadingTwoLabel)?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            (mediaTitleLabel as? HeadingTwoLabel)?.font = UIFont(defaultFontStyle: .bold, textStyle: .caption1, size: 17.0)
         }
     }
     @IBOutlet weak var channelTitleLabel: UILabel! {
         didSet {
             channelTitleLabel.textColor = UIColor(red:0.584, green:0.596, blue:0.616, alpha: 1.000)
-            
         }
     }
     
@@ -55,7 +55,7 @@ class MediaCollectionViewCell: UICollectionViewCell {
             
             channelBottomConstraint.priority = UILayoutPriority(rawValue: 999)
             episodeBottomConstraint.priority = .defaultLow
-            mediaTitleLabel.text = channel.title
+            mediaTitleLabel.attributedText = NSMutableAttributedString(string: channel.title, attributes: [.kern: 0.4, .paragraphStyle: paragraphStyle])
             channelTitleLabel.text?.removeAll()
             mediaImageView.kf.indicatorType = .activity
             mediaImageView.getImage(urlString: channel.imageUrl) { (image, error) in
